@@ -1,5 +1,4 @@
 export type ImageGalleryProps = {
-    orientation: 'left' | 'right';
-    leftProportions:;
-    rightProportions:;
-}
+  division: "half" | "third";
+  children: React.ReactNode;
+};
