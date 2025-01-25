@@ -5,20 +5,22 @@ import { GalleryItem } from "./types";
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Header />
-      {gallerySection.map((item) => {
-        return (
-          <ImageGallery division={item.division}>
-            {item.galleryItems.map((galleryItem, index) => {
-              const Component =
-                galleryItem.component as React.ComponentType<GalleryItem>;
-              return <Component key={index} {...galleryItem} />;
-            })}
-          </ImageGallery>
-        );
-      })}
-    </main>
+      <main>
+        {gallerySection.map((item) => {
+          return (
+            <ImageGallery division={item.division}>
+              {item.galleryItems.map((galleryItem, index) => {
+                const Component =
+                  galleryItem.component as React.ComponentType<GalleryItem>;
+                return <Component key={index} {...galleryItem} />;
+              })}
+            </ImageGallery>
+          );
+        })}
+      </main>
+    </>
   );
 };
 

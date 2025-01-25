@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContent = styled.div`
+export const MainContent = styled.header`
   height: 15vh;
   width: 100%;
   display: flex;
