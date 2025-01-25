@@ -15,7 +15,7 @@ export type GalleryItem =
   | (ImageItemProps & { component: React.ComponentType<ImageItemProps> })
   | (TextItemProps & { component: React.ComponentType<TextItemProps> });
 
-export const Home = () => {
+const Home = () => {
   const firstGallery: GalleryItem[] = [
     {
       alt: "coffe image",
@@ -95,3 +95,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

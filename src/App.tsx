@@ -1,15 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Blog } from "./modules/Blog";
-import { DetailedPost } from "./modules/Blog/Detail";
-import { Home } from "./modules/Home";
+import { RoutesList } from "./Routes/routes";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="blog/post/:id" element={<DetailedPost />} />
+        {RoutesList.map((routes) => {
+          return <Route path={routes.path} element={routes.element()} />;
+        })}
       </Routes>
     </BrowserRouter>
   );
