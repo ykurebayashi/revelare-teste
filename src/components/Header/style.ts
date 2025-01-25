@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MainContent = styled.header`
-  height: 15vh;
+  height: 15dvh;
   width: 100%;
   display: flex;
   justify-content: space-between;
