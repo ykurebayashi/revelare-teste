@@ -1,10 +1,12 @@
+import { Header } from "../../components/Header";
 import { ImageGallery } from "../../components/ImageGallery";
 import { gallerySection } from "./constants";
 import { GalleryItem } from "./types";
 
 const Home = () => {
   return (
-    <div>
+    <main>
+      <Header />
       {gallerySection.map((item) => {
         return (
           <ImageGallery division={item.division}>
@@ -16,7 +18,7 @@ const Home = () => {
           </ImageGallery>
         );
       })}
-    </div>
+    </main>
   );
 };
 

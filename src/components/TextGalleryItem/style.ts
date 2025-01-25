@@ -47,8 +47,8 @@ export const Button = styled.button`
     padding: 0.7em 1.2em;
     text-align: center;
     background: none;
-    border: 1px solid black;
-    box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.75);
+    border: 1px solid #888888;
+    box-shadow: 0px 0px 20px -8px #888888;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
   
