@@ -40,6 +40,7 @@ export const Title = styled.p`
   
 export const Description = styled.p`
     font-size: 1.2em;
+    text-align: justify;
 `;
   
 export const Button = styled.button`
