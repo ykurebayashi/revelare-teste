@@ -1,22 +1,21 @@
 import { ImageGallery } from "../../components/ImageGallery";
-import { firstGallery, secondGallery } from "./constants";
+import { gallerySection } from "./constants";
 import { GalleryItem } from "./types";
 
 const Home = () => {
   return (
     <div>
-      <ImageGallery division="half">
-        {firstGallery.map((item, index) => {
-          const Component = item.component as React.ComponentType<GalleryItem>;
-          return <Component key={index} {...item} />;
-        })}
-      </ImageGallery>
-      <ImageGallery division="third">
-        {secondGallery.map((item, index) => {
-          const Component = item.component as React.ComponentType<GalleryItem>;
-          return <Component key={index} {...item} />;
-        })}
-      </ImageGallery>
+      {gallerySection.map((item) => {
+        return (
+          <ImageGallery division={item.division}>
+            {item.galleryItems.map((galleryItem, index) => {
+              const Component =
+                galleryItem.component as React.ComponentType<GalleryItem>;
+              return <Component key={index} {...galleryItem} />;
+            })}
+          </ImageGallery>
+        );
+      })}
     </div>
   );
 };

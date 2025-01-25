@@ -5,7 +5,7 @@ import F1 from "../../assets/f1.jpg";
 import F3 from "../../assets/f3.jpg";
 import F4 from "../../assets/f4.jpg";
 
-export  const firstGallery: GalleryItem[] = [
+const secondGallery: GalleryItem[] = [
     {
       alt: "coffe image",
       gridColumnStart: 1,
@@ -36,7 +36,7 @@ export  const firstGallery: GalleryItem[] = [
       component: ImageGalleryItem,
     },
   ];
-export  const secondGallery: GalleryItem[] = [
+const firstGallery: GalleryItem[] = [
     {
       title: "coffe title",
       subTitle: "this is a subtitle",
@@ -67,3 +67,14 @@ export  const secondGallery: GalleryItem[] = [
       component: ImageGalleryItem,
     },
   ];
+
+export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[]}[] = [
+  {
+    division: "third",
+    galleryItems: firstGallery
+  },
+  {
+    division: "half",
+    galleryItems: secondGallery
+  }
+]
