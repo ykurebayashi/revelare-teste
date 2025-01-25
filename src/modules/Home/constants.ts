@@ -8,7 +8,7 @@ import F4 from "../../assets/f4.jpg";
 
 const firstGallery: GalleryItem[] = [
   {
-    title: "Quatro bebidas, um milhão de razões",
+    title: "Quatro Bebidas, Um Milhão de Razões",
     subTitle: "Lady Gaga e a starbucks compartinam uma missão: construir um mundo mais amavel e corajoso. Por meio da Fundação Born This Way, Lady Gaga inspirou seus fãs a abraçar a bondade em suas comunidades - online e no mundo todo. Com a sua ajuda, podemos capacitar os jovens a espalhar mais gentileza.", 
     buttonText: "Saber mais",
     buttonClick: () => alert("button function"),
