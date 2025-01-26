@@ -12,13 +12,9 @@ import {
 import { GalleryItem } from "./types";
 import Bg4 from "../../assets/bg4.jpg";
 import { useCheckMobile } from "../../utils/useCheckMobile";
-import { Modal } from "../../components/Modal";
-import { useState } from "react";
-import { TextGalleryItem } from "../../components/TextGalleryItem";
 
 const Home = () => {
   const { isMobile } = useCheckMobile();
-  const [modalInfo, setModalInfo] = useState<boolean>(false);
 
   return (
     <main>
@@ -60,11 +56,7 @@ const Home = () => {
                 galleryItem.component as React.ComponentType<GalleryItem>;
 
               return (
-                <Component
-                  key={`button-round-${itemIndex}`}
-                  {...galleryItem}
-                  buttonClick={() => setModalInfo(true)}
-                />
+                <Component key={`button-round-${itemIndex}`} {...galleryItem} />
               );
             })}
           </ImageGallery>
@@ -75,23 +67,6 @@ const Home = () => {
         <EndSection id="section-end">
           <BannerImage src={Bg4} alt="Armário com acessórios para café e chá" />
         </EndSection>
-      )}
-
-      {!!modalInfo && (
-        <Modal
-          onClose={() => {
-            setModalInfo(false);
-          }}
-          width={isMobile ? "90%" : "50%"}
-          height={isMobile ? "60dvh" : "50dvh"}
-        >
-          <TextGalleryItem
-            title="Lorem Ipsum Dolor"
-            subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget odio non arcu feugiat imperdiet nec sed leo. Sed lectus mauris, fringilla sit amet accumsan at, pellentesque vitae ipsum. Nullam"
-            buttonClick={() => setModalInfo(false)}
-            buttonText="Fechar"
-          />
-        </Modal>
       )}
     </main>
   );

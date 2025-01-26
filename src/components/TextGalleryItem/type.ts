@@ -8,4 +8,6 @@ export type TextItemProps = {
     gridColumnStart?: number;
     gridColumnEnd?: number;
     background?: string ;
+    modalTitle?: string;
+    modalDescription?: string;
 };

@@ -60,6 +60,8 @@ const secondGallery: GalleryItem[] = [
     gridColumnEnd: 2,
     gridRowStart: 1,
     gridRowEnd: 1,
+    modalDescription: 'Teste de nova descrição',
+    modalTitle: 'Teste de novo title',
     component: TextGalleryItem,
   },
   {
