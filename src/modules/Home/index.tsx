@@ -18,8 +18,7 @@ import { TextGalleryItem } from "../../components/TextGalleryItem";
 
 const Home = () => {
   const { isMobile } = useCheckMobile();
-  const [modalInfo, setModalInfo] = useState<number | null>(null);
-  console.log(modalInfo);
+  const [modalInfo, setModalInfo] = useState<boolean>(false);
 
   return (
     <main>
@@ -64,7 +63,7 @@ const Home = () => {
                 <Component
                   key={`button-round-${itemIndex}`}
                   {...galleryItem}
-                  buttonClick={() => setModalInfo(index + 1)}
+                  buttonClick={() => setModalInfo(true)}
                 />
               );
             })}
@@ -81,7 +80,7 @@ const Home = () => {
       {!!modalInfo && (
         <Modal
           onClose={() => {
-            setModalInfo(null);
+            setModalInfo(false);
           }}
           width={isMobile ? "90%" : "50%"}
           height={isMobile ? "60dvh" : "40dvh"}
@@ -89,7 +88,7 @@ const Home = () => {
           <TextGalleryItem
             title="Lorem Ipsum Dolor"
             subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget odio non arcu feugiat imperdiet nec sed leo. Sed lectus mauris, fringilla sit amet accumsan at, pellentesque vitae ipsum. Nullam"
-            buttonClick={() => setModalInfo(null)}
+            buttonClick={() => setModalInfo(false)}
             buttonText="Fechar"
           />
         </Modal>
