@@ -66,3 +66,12 @@ export const BottomLeftImage = styled.img`
   width: 20px;
 `;
 
+export const CheckRecipeButton = styled.button`
+  width: 130px;
+  height: 45px;
+  background: none;
+  border: 1px solid #1f6047;
+  color: #1f6047;
+  border-radius: 50px;
+  cursor: pointer;
+`

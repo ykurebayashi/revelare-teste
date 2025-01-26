@@ -36,6 +36,7 @@ const Blog = () => {
                   date={element.dateModified}
                   img={element.strDrinkThumb || ""}
                   category={element.strCategory}
+                  id={element.idDrink}
                 />
               );
             })}

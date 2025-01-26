@@ -9,11 +9,19 @@ import {
   BottomRightText,
   ContainerImage,
   IconsContainer,
+  CheckRecipeButton,
 } from "./style";
 import { CoffeeCardProps } from "./type";
 import Logo from "../../assets/logo.png";
+import { Link } from "react-router";
 
-export const CoffeeCard = ({ title, category, date, img }: CoffeeCardProps) => {
+export const CoffeeCard = ({
+  title,
+  category,
+  date,
+  img,
+  id,
+}: CoffeeCardProps) => {
   return (
     <MainCard>
       <TitleContainer>
@@ -26,6 +34,10 @@ export const CoffeeCard = ({ title, category, date, img }: CoffeeCardProps) => {
           background={img}
         />
       </ContainerImage>
+
+      <Link to={`/blog/${id}`}>
+        <CheckRecipeButton>Check Recipe</CheckRecipeButton>
+      </Link>
       <BottomRightText>
         {typeof date === "string" ? formatDate(date) : date.toDateString()}
       </BottomRightText>
