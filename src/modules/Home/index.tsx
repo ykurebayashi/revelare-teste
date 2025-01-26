@@ -11,6 +11,7 @@ import {
 } from "./style";
 import { GalleryItem } from "./types";
 import Bg4 from "../../assets/bg4.jpg";
+import { isMobile } from "../../utils/isMobile";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
             division={item.division}
             backgroundColor={item.backgroundColor}
             columns={item.columns}
+            isMobile={isMobile()}
           >
             {item.galleryItems.map((galleryItem, index) => {
               const Component =

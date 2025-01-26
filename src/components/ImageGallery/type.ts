@@ -3,4 +3,5 @@ export type ImageGalleryProps = {
   children: React.ReactNode;
   backgroundColor?: string;
   columns?: number;
+  isMobile?: boolean;
 };
