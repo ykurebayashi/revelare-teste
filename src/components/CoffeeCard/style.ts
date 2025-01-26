@@ -11,6 +11,7 @@ export const MainCard = styled.div`
   align-items: center;
   gap: 2em;
   background-color: white;
+  position: relative;
 `;
 
 export const TitleContainer = styled.div`
@@ -38,4 +39,24 @@ export const Title = styled.h2`
 export const Category = styled.h3`
   color: rgb(51, 51, 51);
   font-size: 1em;
+`;
+
+export const ContainerImage = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+`;
+
+export const BottomRightText = styled.p`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: fit-content;
+`;
+
+export const BottomLeftImage = styled.img`
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 20px;
 `;

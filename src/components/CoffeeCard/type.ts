@@ -3,4 +3,5 @@ export type CoffeeCardProps = {
   date: Date | string;
   img: string;
   category: string;
+  alcoholic?: boolean;
 };

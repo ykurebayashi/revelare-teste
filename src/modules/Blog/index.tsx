@@ -23,6 +23,7 @@ const Blog = () => {
                 date={element.dateModified}
                 img={element.strDrinkThumb || ""}
                 category={element.strCategory}
+                alcoholic={element.strAlcoholic === "Non alcoholic"}
               />
             );
           })}
