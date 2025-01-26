@@ -109,18 +109,18 @@ const fourthGallery: GalleryItem[] = [
   {
     alt: "coffe image",
     gridColumnStart:2,
-    gridColumnEnd: 2,
+    gridColumnEnd: 4,
     gridRowStart: 1,
     gridRowEnd: 3,
     src: Bg3,
     component: ImageGalleryItem,
-    imageFit: 'contain'
+    imageFit: 'fill'
   },
 
 ]
 //https://www.thecocktaildb.com/browse/search/?s=coffee
 
-export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[], backgroundColor?: string}[] = [
+export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[], backgroundColor?: string, columns?: number}[] = [
   {
     division: "third",
     galleryItems: firstGallery
@@ -137,7 +137,8 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
   {
     division: "half",
     galleryItems: fourthGallery,
-    backgroundColor: '#e7e9ed'
+    backgroundColor: '#e7e9ed',
+    columns: 3
   }
 
 ]

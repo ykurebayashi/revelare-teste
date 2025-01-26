@@ -13,6 +13,7 @@ const Home = () => {
             <ImageGallery
               division={item.division}
               backgroundColor={item.backgroundColor}
+              columns={item.columns}
             >
               {item.galleryItems.map((galleryItem, index) => {
                 const Component =
