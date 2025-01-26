@@ -83,7 +83,7 @@ const Home = () => {
             setModalInfo(false);
           }}
           width={isMobile ? "90%" : "50%"}
-          height={isMobile ? "60dvh" : "40dvh"}
+          height={isMobile ? "60dvh" : "50dvh"}
         >
           <TextGalleryItem
             title="Lorem Ipsum Dolor"
