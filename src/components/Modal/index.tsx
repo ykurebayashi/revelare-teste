@@ -1,13 +1,19 @@
-import { StyledDialog, CloseButton } from "./style";
+import { StyledDialog, CloseButton, MainContent } from "./style";
 import { ModalProps } from "./type";
 
-export const Modal = ({ children, isOpen, onClose }: ModalProps) => {
+export const Modal = ({
+  children,
+  isOpen,
+  onClose,
+  height,
+  width,
+}: ModalProps) => {
   return (
     <StyledDialog open={isOpen}>
-      <CloseButton className="modal-close-btn" onClick={onClose}>
-        Close
-      </CloseButton>
-      {children}
+      <MainContent $height={height} $width={width}>
+        <CloseButton onClick={onClose}>X</CloseButton>
+        {children}
+      </MainContent>
     </StyledDialog>
   );
 };
