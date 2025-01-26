@@ -7,7 +7,7 @@ export const MainContent = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0 4em;
-  border-top: 10px solid green;
+  border-top: 10px solid #1f6047;
   background-color: white;
   z-index: 100;
   position: sticky;

@@ -39,7 +39,7 @@ export const Title = styled.p`
       left: 0;
       height: 15px;
       width: 45%;
-      background-color: green;
+      background-color: #1f6047;
     }
 `;
   
