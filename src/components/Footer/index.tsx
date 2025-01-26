@@ -9,6 +9,7 @@ export const Footer = () => {
         justifyContent: "center",
         alignItems: "center",
         color: "white",
+        padding: "10px",
       }}
     >
       Phasellus blandit condimentum lacus sit amet porttitor. Donec fringilla
