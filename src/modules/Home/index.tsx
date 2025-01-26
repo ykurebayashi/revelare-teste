@@ -58,7 +58,7 @@ const Home = () => {
       })}
       {!isMobile && (
         <EndSection id="section-end">
-          <BannerImage src={Bg4} />
+          <BannerImage src={Bg4} alt="Armário com acessórios para café e chá" />
         </EndSection>
       )}
     </main>

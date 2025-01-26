@@ -15,7 +15,7 @@ export const Header = ({ onClickMenu }: HeaderProps) => {
       <Logo src={LogoSrc} alt="logo" />
       <FlexRow>
         <SearchInput type="text" placeholder="Pesquisar" />
-        <BurgerMenuButton onClick={onClickMenu}>
+        <BurgerMenuButton onClick={onClickMenu} aria-haspopup="true">
           <Menu />
         </BurgerMenuButton>
       </FlexRow>

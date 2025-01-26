@@ -29,7 +29,9 @@ export const TextGalleryItem = ({
       <MainContent>
         <Title>{title}</Title>
         <Description>{subTitle}</Description>
-        <Button onClick={buttonClick}>{buttonText}</Button>
+        <Button aria-haspopup="true" onClick={buttonClick}>
+          {buttonText}
+        </Button>
       </MainContent>
     </CustomContainer>
   );

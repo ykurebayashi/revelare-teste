@@ -25,7 +25,7 @@ const firstGallery: GalleryItem[] = [
     component: TextGalleryItem,
   },
   {
-    alt: "coffe image",
+    alt:"Quatro copos de plástico de café, cada um com uma letra formando a palavra 'GAGA'",
     gridColumnStart: 1,
     gridColumnEnd: 1,
     gridRowStart: 3,
@@ -34,7 +34,7 @@ const firstGallery: GalleryItem[] = [
     component: ImageGalleryItem,
   },
   {
-    alt: "coffe image",
+    alt: "Pessoa sorrindo e segurando um copo de café",
     gridColumnStart: 2,
     gridColumnEnd: 2,
     gridRowStart: 1,
@@ -45,7 +45,7 @@ const firstGallery: GalleryItem[] = [
 ];
 const secondGallery: GalleryItem[] = [
   {
-    alt: "coffe image",
+    alt: "Mão segurando um copo de café em um fundo de folhas verdes",
     gridColumnStart: 1,
     gridColumnEnd: 1,
     gridRowStart: 1,
@@ -65,7 +65,7 @@ const secondGallery: GalleryItem[] = [
     component: TextGalleryItem,
   },
   {
-    alt: "coffe image",
+    alt: "Copo de café com um fundo de mármore com folhas e grãos de café",
     gridColumnStart: 2,
     gridColumnEnd: 2,
     gridRowStart: 2,
@@ -88,7 +88,7 @@ const thirdGallery: GalleryItem[] = [
     background:Bg2
   },
   {
-    alt: "coffe image",
+    alt: "Pessoa tomando um copo de café por um canudo",
     gridColumnStart: 2,
     gridColumnEnd: 2,
     gridRowStart: 1,
@@ -110,7 +110,7 @@ const fourthGallery: GalleryItem[] = [
     component: TextGalleryItem,
   },
   {
-    alt: "coffe image",
+    alt: "Quatro copos de plástico de café, cada um de um sabor e cor diferente",
     gridColumnStart:2,
     gridColumnEnd: 4,
     gridRowStart: 1,
@@ -149,13 +149,13 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
 export const coffeeButtons = [
   {
   background: C1,
-  alt: "coffe image",
+  alt: "Copo de café com chantilly e cor de caramelo",
   },
   {
     background: C2,
-    alt: "coffe image",
+    alt: "Copo de café com chantilly e cor de chocolate",
   },
   {
     background: C3,
-    alt: "coffe image",
+    alt: "Copo de café com chantilly e cor verde",
 }];
