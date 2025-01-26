@@ -60,6 +60,15 @@ const getCoffeeRecipes = async() => {
     return data as {drinks:CoffeeSingleType[]};
 }
 
+const getSingleCoffeeRecipe = async({id}:{id: string}) => {
+    const { data } = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`);
+    return data as {drinks:CoffeeSingleType[]};
+}
+
 export const useGetCoffeeRecipes = () => {
     return useQuery({ queryKey: ['get_all_coffee'], queryFn: () =>getCoffeeRecipes() })
+}
+
+export const useGetSingleCoffee = ({id}: { id: string}) => {
+    return useQuery({ queryKey: ['get_single_coffee'], queryFn: () =>getSingleCoffeeRecipe({id}) })
 }
