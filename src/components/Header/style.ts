@@ -8,6 +8,10 @@ export const MainContent = styled.header`
   align-items: center;
   padding: 0 4em;
   border-top: 10px solid green;
+  background-color: white;
+  z-index: 100;
+  position: sticky;
+  top: 0;
 `;
 
 export const FlexRow = styled.div`

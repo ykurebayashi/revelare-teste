@@ -1,4 +1,3 @@
-import { Header } from "../../components/Header";
 import { ImageGallery } from "../../components/ImageGallery";
 import { gallerySection } from "./constants";
 import { GalleryItem } from "./types";
@@ -6,7 +5,6 @@ import { GalleryItem } from "./types";
 const Home = () => {
   return (
     <>
-      <Header />
       <main>
         {gallerySection.map((item) => {
           return (
