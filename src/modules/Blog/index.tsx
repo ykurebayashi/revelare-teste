@@ -1,6 +1,6 @@
 import { useGetCoffeeRecipes } from "../../query/useGetCoffees";
 import { CoffeeCard } from "../../components/CoffeeCard";
-import { useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import {
   MainContent,
   PaginationButtons,
@@ -8,19 +8,33 @@ import {
   PaginationButton,
   HomepageButton,
 } from "./style";
+import { SearchContext } from "../../state/searchContext";
 
 const MAX_RENDER = 6;
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
+  const context = useContext(SearchContext);
   const [page, setPage] = useState<number>(0);
 
   const usedData = useMemo(() => {
     const startIndex = page * MAX_RENDER;
     const endIndex = startIndex + MAX_RENDER;
 
-    return data?.drinks.slice(startIndex, endIndex);
-  }, [data, page]);
+    const result = data?.drinks.slice(startIndex, endIndex);
+
+    if (context?.search) {
+      return result?.filter((element) =>
+        element.strDrink.toLowerCase().includes(context.search.toLowerCase())
+      );
+    }
+
+    return result;
+  }, [data, page, context?.search]);
+
+  useEffect(() => {
+    setPage(0);
+  }, [context?.search]);
 
   return (
     <Main>

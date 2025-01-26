@@ -13,17 +13,24 @@ import {
 import { useRef, useState } from "react";
 import { Link } from "react-router";
 import { useOutsideClick } from "../../utils/useGetClickOutside";
+import { HeaderProps } from "./type";
 
-export const Header = () => {
+export const Header = ({ search, setSearch }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const menuRef = useRef<HTMLDivElement>(null);
 
   useOutsideClick(menuRef, () => setIsOpen(false));
+
   return (
     <MainContent>
       <Logo src={LogoSrc} alt="logo" />
       <FlexRow>
-        <SearchInput type="text" placeholder="Pesquisar" />
+        <SearchInput
+          type="text"
+          placeholder="Pesquisar"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
         <BurgerMenuButton onClick={() => setIsOpen(true)} aria-haspopup="true">
           <Menu />
         </BurgerMenuButton>

@@ -57,7 +57,6 @@ type CoffeeSingleType = {
 
 const getCoffeeRecipes = async() => {
     const { data } = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?s=coffee');
-    console.log(data)
     return data as {drinks:CoffeeSingleType[]};
 }
 
