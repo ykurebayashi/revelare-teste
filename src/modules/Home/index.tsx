@@ -45,6 +45,7 @@ const Home = () => {
           })}
         </OptionsDiv>
       </WelcomeSection>
+
       {gallerySection.map((item, index) => {
         return (
           <ImageGallery
@@ -70,6 +71,7 @@ const Home = () => {
           </ImageGallery>
         );
       })}
+
       {!isMobile && (
         <EndSection id="section-end">
           <BannerImage src={Bg4} alt="Armário com acessórios para café e chá" />
