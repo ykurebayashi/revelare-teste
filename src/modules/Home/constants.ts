@@ -8,6 +8,9 @@ import F4 from "../../assets/f4.jpg";
 import F5 from "../../assets/f5.jpg";
 import Bg2 from "../../assets/bg2.jpg";
 import Bg3 from "../../assets/bg3.jpg";
+import C1 from "../../assets/c1.jpg";
+import C2 from "../../assets/c2.jpg";
+import C3 from "../../assets/c3.jpg";
 
 const firstGallery: GalleryItem[] = [
   {
@@ -142,3 +145,17 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
   }
 
 ]
+
+export const coffeeButtons = [
+  {
+  background: C1,
+  alt: "coffe image",
+  },
+  {
+    background: C2,
+    alt: "coffe image",
+  },
+  {
+    background: C3,
+    alt: "coffe image",
+}];

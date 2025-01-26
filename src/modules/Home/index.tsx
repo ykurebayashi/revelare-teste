@@ -1,17 +1,14 @@
 import { ImageGallery } from "../../components/ImageGallery";
 import { RoundInfo } from "../../components/RoundInfo";
-import { gallerySection } from "./constants";
+import { coffeeButtons, gallerySection } from "./constants";
 import { GalleryItem } from "./types";
-import C1 from "../../assets/c1.jpg";
-import C2 from "../../assets/c2.jpg";
-import C3 from "../../assets/c3.jpg";
 
 const Home = () => {
   return (
     <main>
-      <RoundInfo background={C1} alt="coffe image" />
-      <RoundInfo background={C2} alt="coffe image" />
-      <RoundInfo background={C3} alt="coffe image" />
+      {coffeeButtons.map((element) => {
+        return <RoundInfo alt={element.alt} background={element.background} />;
+      })}
       {gallerySection.map((item) => {
         return (
           <ImageGallery
