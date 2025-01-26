@@ -21,6 +21,17 @@ export const MainContent = styled.div<{$width?: string; $height?: string;}>`
     position: relative;
     border-radius: 5px;
     padding: 2em;
+    animation: showUpFromBottom 0.2s ease-out forwards;
+
+
+  @keyframes showUpFromBottom {
+    0% {
+      transform: translate(0%, 100%);
+    }
+    100% {
+      transform: translate(0%, -0%);
+    }
+  }
 `  
 
 export const CloseButton = styled.button`

@@ -12,9 +12,12 @@ import {
 import { GalleryItem } from "./types";
 import Bg4 from "../../assets/bg4.jpg";
 import { useCheckMobile } from "../../utils/useCheckMobile";
+import { Modal } from "../../components/Modal";
+import { useState } from "react";
 
 const Home = () => {
   const { isMobile } = useCheckMobile();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
     <main>
@@ -51,7 +54,13 @@ const Home = () => {
             {item.galleryItems.map((galleryItem, index) => {
               const Component =
                 galleryItem.component as React.ComponentType<GalleryItem>;
-              return <Component key={index} {...galleryItem} />;
+              return (
+                <Component
+                  key={index}
+                  {...galleryItem}
+                  buttonClick={() => setIsOpen(true)}
+                />
+              );
             })}
           </ImageGallery>
         );
@@ -60,6 +69,17 @@ const Home = () => {
         <EndSection id="section-end">
           <BannerImage src={Bg4} alt="Armário com acessórios para café e chá" />
         </EndSection>
+      )}
+      {isOpen && (
+        <Modal
+          onClose={() => {
+            setIsOpen(false);
+          }}
+          width="350px"
+          height="200px"
+        >
+          <p>oi</p>
+        </Modal>
       )}
     </main>
   );
