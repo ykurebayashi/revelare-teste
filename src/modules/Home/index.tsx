@@ -6,8 +6,11 @@ import {
   OptionsDiv,
   SubtitleDescription,
   WelcomeTitle,
+  EndDiv,
+  BannerImage,
 } from "./style";
 import { GalleryItem } from "./types";
+import Bg4 from "../../assets/bg4.jpg";
 
 const Home = () => {
   return (
@@ -44,6 +47,9 @@ const Home = () => {
           </ImageGallery>
         );
       })}
+      <EndDiv>
+        <BannerImage src={Bg4} />
+      </EndDiv>
     </main>
   );
 };

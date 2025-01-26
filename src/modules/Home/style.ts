@@ -30,3 +30,13 @@ export const OptionsDiv = styled.div`
   align-items: center;
   gap: 2em;
 `;
+
+export const EndDiv = styled.div`
+  width: 100%;
+  height: 85vh;
+  padding: 0 5em;
+  background-color: #e7e9ed;
+`
+export const BannerImage = styled.img`
+  height: 100%;
+`
