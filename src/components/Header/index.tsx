@@ -48,14 +48,22 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
         <MenuOptions ref={menuRef}>
           <RedirectButtonsConatiner>
             <Link
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                setSearch("");
+                setCurrentValue("");
+              }}
               to={"/"}
               style={{ width: "100%", textAlign: "center" }}
             >
               <LinkButton>Home</LinkButton>
             </Link>
             <Link
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                setSearch("");
+                setCurrentValue("");
+              }}
               to={"/blog"}
               style={{ width: "100%", textAlign: "center" }}
             >

@@ -15,7 +15,6 @@ const DetailedPost = () => {
 
   const { data } = useGetSingleCoffee({ id: id || "" });
 
-  console.log(data);
   return (
     <MainContent>
       <DrinkTitle>{data?.drinks[0].strDrink}</DrinkTitle>
