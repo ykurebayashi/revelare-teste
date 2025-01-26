@@ -53,6 +53,7 @@ export const BottomRightText = styled.p`
   bottom: 10px;
   right: 10px;
   width: fit-content;
+    color: #1f6047;
 `;
 
 export const IconsContainer = styled.div`
