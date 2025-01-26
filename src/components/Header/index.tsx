@@ -10,16 +10,25 @@ import {
   LinkButton,
   RedirectButtonsConatiner,
 } from "./style";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { useOutsideClick } from "../../utils/useGetClickOutside";
 import { HeaderProps } from "./type";
+import { useDebounce } from "../../utils/useDebounce";
 
 export const Header = ({ search, setSearch }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [currentValue, setCurrentValue] = useState(search);
+
   const menuRef = useRef<HTMLDivElement>(null);
 
+  const debouncedValue = useDebounce(currentValue, 300);
+
   useOutsideClick(menuRef, () => setIsOpen(false));
+
+  useEffect(() => {
+    setSearch(debouncedValue);
+  }, [debouncedValue, setSearch]);
 
   return (
     <MainContent>
@@ -28,8 +37,8 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
         <SearchInput
           type="text"
           placeholder="Pesquisar"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={currentValue}
+          onChange={(e) => setCurrentValue(e.target.value)}
         />
         <BurgerMenuButton onClick={() => setIsOpen(true)} aria-haspopup="true">
           <Menu />
