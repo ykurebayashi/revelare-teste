@@ -1,9 +1,9 @@
 import { RoundInfoProps } from "./type";
 import { Button, Image } from "./style";
 
-export const RoundInfo = ({ background, alt }: RoundInfoProps) => {
+export const RoundInfo = ({ background, alt, isMobile }: RoundInfoProps) => {
   return (
-    <Button>
+    <Button $isMobile={isMobile}>
       <Image src={background} alt={alt} />
     </Button>
   );

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
-  width: 15dvh;
-  height: 15dvh;
+export const Button = styled.button<{$isMobile?: boolean}>`
+  width: ${props => props.$isMobile ? '10dvh' : '15dvh'};
+  height: ${props => props.$isMobile ? '10dvh' : '15dvh'};
   border-radius: 50%;
   border: 5px solid #1f6047;
   background: none;
