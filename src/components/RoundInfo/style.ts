@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{$isMobile?: boolean}>`
+export const Button = styled.div<{$isMobile?: boolean}>`
   width: ${props => props.$isMobile ? '10dvh' : '15dvh'};
   height: ${props => props.$isMobile ? '10dvh' : '15dvh'};
   border-radius: 50%;
