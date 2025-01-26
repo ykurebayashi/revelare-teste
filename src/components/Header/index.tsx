@@ -32,7 +32,9 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
 
   return (
     <MainContent>
-      <Logo src={LogoSrc} alt="logo" />
+      <Link to={"/"}>
+        <Logo src={LogoSrc} alt="logo" />
+      </Link>
       <FlexRow>
         <SearchInput
           type="text"

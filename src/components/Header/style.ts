@@ -23,7 +23,7 @@ export const FlexRow = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 60%;
+  height: 75px;
   width: auto;
 `;
 
