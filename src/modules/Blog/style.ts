@@ -65,7 +65,7 @@ export const HomepageButton = styled.button`
 export const CategoryFilter = styled.aside`
   position: absolute;
   right: 0;
-  top: 20%;
+  top: 25%;
   border: 1px solid  #1f6047;
   padding: 10px;
   background-color: white;
@@ -77,9 +77,10 @@ export const CategoryFilter = styled.aside`
 
 `
 
-export const ListItem = styled.li`
+export const ListItem = styled.li<{$isSelected?: boolean}>`
   color: #1f6047;
-  font-size: 0.8em;
+  font-size: ${props => props.$isSelected ? '1em' : '0.8em'};
   margin-left: 10px;
   cursor: pointer;
+  font-weight: ${props => props.$isSelected ? '700' : '400'};
 `

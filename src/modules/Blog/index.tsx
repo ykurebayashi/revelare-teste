@@ -99,7 +99,10 @@ const Blog = () => {
         <ul>
           {categories.map((element) => {
             return (
-              <ListItem onClick={() => setCategory(element)}>
+              <ListItem
+                onClick={() => setCategory(element)}
+                $isSelected={element.toLowerCase() === category.toLowerCase()}
+              >
                 {element}
               </ListItem>
             );
