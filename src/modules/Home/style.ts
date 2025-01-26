@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Bg from "../../assets/bg.jpg";
 
-export const WelcomeDiv = styled.div<{ $isMobile: boolean }>`
+export const WelcomeSection = styled.section<{ $isMobile: boolean }>`
   width: 100%;
   height: 85dvh;
   display: flex;
@@ -19,9 +19,10 @@ export const WelcomeTitle = styled.h1<{ $isMobile: boolean }>`
   font-size: ${props => props.$isMobile ? '3.4em' : '6.5em'};
 `;
 
-export const SubtitleDescription = styled.p<{ $isMobile: boolean }>`
+export const SubtitleDescription = styled.h3<{ $isMobile: boolean }>`
   font-size: 1.5em;
   width: ${props => props.$isMobile ? '100%' : '40%'};
+  font-weight: 400;
 `;
 
 export const OptionsDiv = styled.div`
@@ -31,7 +32,7 @@ export const OptionsDiv = styled.div`
   gap: 2em;
 `;
 
-export const EndDiv = styled.div`
+export const EndSection = styled.section`
   width: 100%;
   height: 85vh;
   padding: 0 5em;

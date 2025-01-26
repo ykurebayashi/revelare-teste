@@ -7,6 +7,7 @@ export const ImageGallery = ({
   backgroundColor,
   columns,
   isMobile,
+  id,
 }: ImageGalleryProps) => {
   return (
     <MainGrid
@@ -14,6 +15,7 @@ export const ImageGallery = ({
       $backgroundColor={backgroundColor}
       $columns={columns}
       $isMobile={isMobile}
+      id={id}
     >
       {children}
     </MainGrid>

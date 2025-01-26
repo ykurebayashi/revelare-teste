@@ -28,7 +28,7 @@ export const MainContent = styled.div`
     gap: 1.6em;
 `;
   
-export const Title = styled.p`
+export const Title = styled.h2`
     position: relative;
     font-weight: bolder;
     font-size: 3em;
@@ -43,9 +43,10 @@ export const Title = styled.p`
     }
 `;
   
-export const Description = styled.p`
+export const Description = styled.h3`
     font-size: 1.2em;
     text-align: justify;
+    font-weight: 400;
 `;
   
 export const Button = styled.button`

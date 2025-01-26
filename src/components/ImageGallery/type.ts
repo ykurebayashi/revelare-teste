@@ -4,4 +4,5 @@ export type ImageGalleryProps = {
   backgroundColor?: string;
   columns?: number;
   isMobile?: boolean;
+  id?: string;
 };

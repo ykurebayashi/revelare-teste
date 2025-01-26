@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const MainGrid = styled.div<{ $division: "half" | "third", $backgroundColor?: string, $columns?: number, $isMobile?: boolean }>`
+export const MainGrid = styled.section<{ $division: "half" | "third", $backgroundColor?: string, $columns?: number, $isMobile?: boolean }>`
   ${({ $isMobile, $division, $columns }) => !$isMobile && css`
   display: grid;
     grid-template-rows: repeat(

@@ -2,11 +2,11 @@ import { ImageGallery } from "../../components/ImageGallery";
 import { RoundInfo } from "../../components/RoundInfo";
 import { coffeeButtons, gallerySection } from "./constants";
 import {
-  WelcomeDiv,
+  WelcomeSection,
   OptionsDiv,
   SubtitleDescription,
   WelcomeTitle,
-  EndDiv,
+  EndSection,
   BannerImage,
 } from "./style";
 import { GalleryItem } from "./types";
@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
     <main>
-      <WelcomeDiv $isMobile={isMobile}>
+      <WelcomeSection id="section-welcome" $isMobile={isMobile}>
         <div>
           <WelcomeTitle $isMobile={isMobile}>Starbucks &#174;</WelcomeTitle>
           <WelcomeTitle $isMobile={isMobile}>Happy Hour</WelcomeTitle>
@@ -38,14 +38,15 @@ const Home = () => {
             );
           })}
         </OptionsDiv>
-      </WelcomeDiv>
-      {gallerySection.map((item) => {
+      </WelcomeSection>
+      {gallerySection.map((item, index) => {
         return (
           <ImageGallery
             division={item.division}
             backgroundColor={item.backgroundColor}
             columns={item.columns}
             isMobile={isMobile}
+            id={`section-${index}`}
           >
             {item.galleryItems.map((galleryItem, index) => {
               const Component =
@@ -56,9 +57,9 @@ const Home = () => {
         );
       })}
       {!isMobile && (
-        <EndDiv>
+        <EndSection id="section-end">
           <BannerImage src={Bg4} />
-        </EndDiv>
+        </EndSection>
       )}
     </main>
   );
