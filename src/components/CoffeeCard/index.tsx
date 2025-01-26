@@ -8,17 +8,12 @@ import {
   BottomLeftImage,
   BottomRightText,
   ContainerImage,
+  IconsContainer,
 } from "./style";
 import { CoffeeCardProps } from "./type";
 import Logo from "../../assets/logo.png";
 
-export const CoffeeCard = ({
-  title,
-  category,
-  date,
-  img,
-  alcoholic,
-}: CoffeeCardProps) => {
+export const CoffeeCard = ({ title, category, date, img }: CoffeeCardProps) => {
   return (
     <MainCard>
       <TitleContainer>
@@ -34,7 +29,9 @@ export const CoffeeCard = ({
       <BottomRightText>
         {typeof date === "string" ? formatDate(date) : date.toDateString()}
       </BottomRightText>
-      <BottomLeftImage alt="Starbucks logo" src={Logo} />
+      <IconsContainer>
+        <BottomLeftImage alt="Starbucks logo" src={Logo} />
+      </IconsContainer>
     </MainCard>
   );
 };

@@ -35,7 +35,7 @@ const Blog = () => {
                   date={element.dateModified}
                   img={element.strDrinkThumb || ""}
                   category={element.strCategory}
-                  alcoholic={element.strAlcoholic === "Non alcoholic"}
+                  alcoholic={element.strAlcoholic !== "Non alcoholic"}
                 />
               );
             })}
@@ -43,11 +43,18 @@ const Blog = () => {
         )}
       </MainContent>
       <PaginationButtons>
-        <PaginationButton onClick={() => setPage(page - 1)}>
-          prev
+        <PaginationButton
+          disabled={page === 0}
+          onClick={() => setPage(page - 1)}
+        >
+          Back
         </PaginationButton>
-        <PaginationButton onClick={() => setPage(page + 1)}>
-          next
+
+        <PaginationButton
+          disabled={(usedData?.length ?? 0) < 6}
+          onClick={() => setPage(page + 1)}
+        >
+          Next
         </PaginationButton>
       </PaginationButtons>
     </Main>

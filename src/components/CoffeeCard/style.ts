@@ -55,9 +55,14 @@ export const BottomRightText = styled.p`
   width: fit-content;
 `;
 
-export const BottomLeftImage = styled.img`
+export const IconsContainer = styled.div`
   position: absolute;
   bottom: 10px;
   left: 10px;
+  display: flex;
+  gap: 10px;
+`
+export const BottomLeftImage = styled.img`
   width: 20px;
 `;
+

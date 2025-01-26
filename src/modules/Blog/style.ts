@@ -13,10 +13,11 @@ export const MainContent = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 2em 3em;
-  min-height: 75dvh;
+  height: 78dvh;
   width: 100%;
   padding: 10px 0;
   background-color: #e7e9ed;
+  overflow-y: scroll;
 `;
 
 export const PaginationButtons = styled.div`
