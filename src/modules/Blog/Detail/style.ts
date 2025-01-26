@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const MainContent = styled.main`
+export const MainContent = styled.main<{$isMobile?: boolean}>`
   height: 85vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 5%;
+  padding: ${({$isMobile}) => $isMobile ? '20% 5%' : '5%'};
   position: relative;
 `;
 

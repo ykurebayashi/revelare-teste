@@ -17,7 +17,7 @@ const DetailedPost = () => {
   const { data } = useGetSingleCoffee({ id: id || "" });
 
   return (
-    <MainContent>
+    <MainContent $isMobile={isMobile}>
       <Link to={"/blog"}>
         <BackPage>
           &lt; <span>Voltar</span>
