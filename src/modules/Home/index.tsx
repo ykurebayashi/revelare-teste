@@ -21,14 +21,12 @@ const Home = () => {
 
   return (
     <main>
-      <WelcomeDiv $isMobile={isMobileDevice}>
+      <WelcomeDiv>
         <div>
-          <WelcomeTitle $isMobile={isMobileDevice}>
-            Starbucks &#174;
-          </WelcomeTitle>
-          <WelcomeTitle $isMobile={isMobileDevice}>Happy Hour</WelcomeTitle>
+          <WelcomeTitle>Starbucks &#174;</WelcomeTitle>
+          <WelcomeTitle>Happy Hour</WelcomeTitle>
         </div>
-        <SubtitleDescription $isMobile={isMobileDevice}>
+        <SubtitleDescription>
           Encontraremos voce em sua caixa de entrada. Ofertas de bebidas estão a
           caminho
         </SubtitleDescription>
