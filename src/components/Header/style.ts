@@ -53,6 +53,16 @@ export const MenuOptions = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  animation: slideIn 0.5s forwards; 
+
+  @keyframes slideIn {
+    0% {
+      right: -300px; /* Começa fora da tela */
+    }
+    100% {
+      right: 0; /* Termina na posição normal */
+    }
+  }
 `
 
 export const RedirectButtonsConatiner = styled.div`

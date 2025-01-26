@@ -31,10 +31,18 @@ export const Header = () => {
       {isOpen && (
         <MenuOptions ref={menuRef}>
           <RedirectButtonsConatiner>
-            <Link to={"/"} style={{ width: "100%", textAlign: "center" }}>
+            <Link
+              onClick={() => setIsOpen(false)}
+              to={"/"}
+              style={{ width: "100%", textAlign: "center" }}
+            >
               <LinkButton>Home</LinkButton>
             </Link>
-            <Link to={"/blog"} style={{ width: "100%", textAlign: "center" }}>
+            <Link
+              onClick={() => setIsOpen(false)}
+              to={"/blog"}
+              style={{ width: "100%", textAlign: "center" }}
+            >
               <LinkButton>Blog</LinkButton>
             </Link>
           </RedirectButtonsConatiner>
