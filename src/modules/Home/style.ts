@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import Bg from "../../assets/bg.jpg";
-import { isMobile } from "../../utils/isMobile";
 
-const isMobileDevice = isMobile();
-
-export const WelcomeDiv = styled.div`
+export const WelcomeDiv = styled.div<{ $isMobile: boolean }>`
   width: 100%;
   height: 85dvh;
   display: flex;
@@ -12,19 +9,19 @@ export const WelcomeDiv = styled.div`
   justify-content: center;
   align-items: flex-start;
   gap: 10%;
-  padding: ${isMobileDevice ? '1em 2em' : '1em 6em'};;
+  padding: ${props => props.$isMobile ? '1em 2em' : '1em 6em'};;
   background-image: url(${Bg});
   background-size: cover;
   background-position: center;
 `;
 
-export const WelcomeTitle = styled.h1`
-  font-size: ${isMobileDevice ? '4em' : '6.5em'};
+export const WelcomeTitle = styled.h1<{ $isMobile: boolean }>`
+  font-size: ${props => props.$isMobile ? '3.4em' : '6.5em'};
 `;
 
-export const SubtitleDescription = styled.p`
+export const SubtitleDescription = styled.p<{ $isMobile: boolean }>`
   font-size: 1.5em;
-  width: ${isMobileDevice ? '100%' : '40%'};
+  width: ${props => props.$isMobile ? '100%' : '40%'};
 `;
 
 export const OptionsDiv = styled.div`

@@ -11,22 +11,19 @@ import {
 } from "./style";
 import { GalleryItem } from "./types";
 import Bg4 from "../../assets/bg4.jpg";
-import { isMobile } from "../../utils/isMobile";
-import { useMemo } from "react";
+import { useCheckMobile } from "../../utils/useCheckMobile";
 
 const Home = () => {
-  const isMobileDevice = useMemo(() => {
-    return isMobile();
-  }, []);
+  const { isMobile } = useCheckMobile();
 
   return (
     <main>
-      <WelcomeDiv>
+      <WelcomeDiv $isMobile={isMobile}>
         <div>
-          <WelcomeTitle>Starbucks &#174;</WelcomeTitle>
-          <WelcomeTitle>Happy Hour</WelcomeTitle>
+          <WelcomeTitle $isMobile={isMobile}>Starbucks &#174;</WelcomeTitle>
+          <WelcomeTitle $isMobile={isMobile}>Happy Hour</WelcomeTitle>
         </div>
-        <SubtitleDescription>
+        <SubtitleDescription $isMobile={isMobile}>
           Encontraremos voce em sua caixa de entrada. Ofertas de bebidas estão a
           caminho
         </SubtitleDescription>
@@ -34,7 +31,7 @@ const Home = () => {
           {coffeeButtons.map((element) => {
             return (
               <RoundInfo
-                isMobile={isMobileDevice}
+                isMobile={isMobile}
                 alt={element.alt}
                 background={element.background}
               />
@@ -48,7 +45,7 @@ const Home = () => {
             division={item.division}
             backgroundColor={item.backgroundColor}
             columns={item.columns}
-            isMobile={isMobileDevice}
+            isMobile={isMobile}
           >
             {item.galleryItems.map((galleryItem, index) => {
               const Component =
@@ -58,7 +55,7 @@ const Home = () => {
           </ImageGallery>
         );
       })}
-      {!isMobileDevice && (
+      {!isMobile && (
         <EndDiv>
           <BannerImage src={Bg4} />
         </EndDiv>
