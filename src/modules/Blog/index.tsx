@@ -1,7 +1,12 @@
 import { useGetCoffeeRecipes } from "../../query/useGetCoffees";
 import { CoffeeCard } from "../../components/CoffeeCard";
 import { useMemo, useState } from "react";
-import { MainContent } from "./style";
+import {
+  MainContent,
+  PaginationButtons,
+  Main,
+  PaginationButton,
+} from "./style";
 
 const MAX_RENDER = 6;
 
@@ -17,31 +22,35 @@ const Blog = () => {
   }, [data, page]);
 
   return (
-    <MainContent>
-      {isLoading ? (
-        "Loading"
-      ) : (
-        <>
-          {usedData?.map((element) => {
-            return (
-              <CoffeeCard
-                title={element.strDrink}
-                date={element.dateModified}
-                img={element.strDrinkThumb || ""}
-                category={element.strCategory}
-                alcoholic={element.strAlcoholic === "Non alcoholic"}
-              />
-            );
-          })}
-        </>
-      )}
-      <button style={{ width: "100%" }} onClick={() => setPage(page - 1)}>
-        prev
-      </button>
-      <button style={{ width: "100%" }} onClick={() => setPage(page + 1)}>
-        next
-      </button>
-    </MainContent>
+    <Main>
+      <MainContent>
+        {isLoading ? (
+          "Loading"
+        ) : (
+          <>
+            {usedData?.map((element) => {
+              return (
+                <CoffeeCard
+                  title={element.strDrink}
+                  date={element.dateModified}
+                  img={element.strDrinkThumb || ""}
+                  category={element.strCategory}
+                  alcoholic={element.strAlcoholic === "Non alcoholic"}
+                />
+              );
+            })}
+          </>
+        )}
+      </MainContent>
+      <PaginationButtons>
+        <PaginationButton onClick={() => setPage(page - 1)}>
+          prev
+        </PaginationButton>
+        <PaginationButton onClick={() => setPage(page + 1)}>
+          next
+        </PaginationButton>
+      </PaginationButtons>
+    </Main>
   );
 };
 

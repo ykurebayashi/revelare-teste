@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainCard = styled.div`
   width: 350px;
-  height: 300px;
+  height: 275px;
   border: 1px solid green;
   border-radius: 4px;
   padding: 5px 15px;
@@ -19,12 +19,13 @@ export const TitleContainer = styled.div`
   align-items: baseline;
   justify-content: flex-start;
   gap: 10px;
+  width: 100%;
 `;
 
 export const Title = styled.h2`
   position: relative;
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.5em;
   &::before {
     content: "";
     position: absolute;

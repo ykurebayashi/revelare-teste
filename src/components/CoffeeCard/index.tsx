@@ -30,7 +30,6 @@ export const CoffeeCard = ({
           alt={`food: ${title}, category: ${category}`}
           background={img}
         />
-        <p>Alcoholic: {alcoholic ? "Yes" : "No"}</p>
       </ContainerImage>
       <BottomRightText>
         {typeof date === "string" ? formatDate(date) : date.toDateString()}
