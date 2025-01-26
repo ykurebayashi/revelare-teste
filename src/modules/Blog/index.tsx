@@ -1,5 +1,21 @@
+import { useGetCoffeeRecipes } from "../../query/useGetCoffees";
+
 const Blog = () => {
-  return <p>Blog</p>;
+  const { data, isLoading } = useGetCoffeeRecipes();
+
+  return (
+    <div>
+      {isLoading ? (
+        "Loading"
+      ) : (
+        <>
+          {data?.drinks.map((element) => {
+            return <p>{element?.strDrink}</p>;
+          })}
+        </>
+      )}
+    </div>
+  );
 };
 
 export default Blog;
