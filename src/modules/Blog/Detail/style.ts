@@ -7,6 +7,7 @@ export const MainContent = styled.main`
   flex-direction: column;
   align-items: flex-start;
   padding: 5%;
+  position: relative;
 `;
 
 export const DrinkTitle = styled.h1`
@@ -43,3 +44,21 @@ export const DrinkImage = styled.img<{$isMobile?: boolean}>`
   height: 100%;
   object-fit: contain;
 `;
+
+export const BackPage = styled.button`
+  background: none;
+  border: none;
+  width: 100px;
+  cursor: pointer;
+  color: black;
+  transform: translateX(15px);
+  position: absolute;
+  top: 20px;
+  left: 30px;
+
+  &:hover {
+    color: #1f6047;
+    transform: translateX(0px);
+    transition: transform 0.3s ease;
+  }
+`
