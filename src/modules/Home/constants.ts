@@ -5,6 +5,8 @@ import F1 from "../../assets/f1.jpg";
 import F2 from "../../assets/f2.jpg";
 import F3 from "../../assets/f3.jpg";
 import F4 from "../../assets/f4.jpg";
+import F5 from "../../assets/f5.jpg";
+import Bg2 from "../../assets/bg2.jpg";
 
 const firstGallery: GalleryItem[] = [
   {
@@ -68,6 +70,29 @@ const secondGallery: GalleryItem[] = [
     component: ImageGalleryItem,
   },
 ];
+const thirdGallery: GalleryItem[] = [
+  {
+    title: "Chegou o novo ultra caramel frappuccino!",
+    subTitle: "Parabéns por favor isso! Isso exige caramelo. Com creme de leite fresco. Chegou o novo ultra caramel frappuccino!",
+    buttonText: "Saber mais",
+    buttonClick: () => alert("button function"),
+    gridColumnStart: 1,
+    gridColumnEnd: 1,
+    gridRowStart: 1,
+    gridRowEnd: 3,
+    component: TextGalleryItem,
+    background:Bg2
+  },
+  {
+    alt: "coffe image",
+    gridColumnStart: 2,
+    gridColumnEnd: 2,
+    gridRowStart: 1,
+    gridRowEnd: 3,
+    src: F5,
+    component: ImageGalleryItem,
+  },
+];
 
 export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[]}[] = [
   {
@@ -77,5 +102,9 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
   {
     division: "half",
     galleryItems: secondGallery
+  },
+  {
+    division: "half",
+    galleryItems: thirdGallery
   }
 ]

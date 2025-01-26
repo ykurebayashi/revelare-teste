@@ -16,6 +16,7 @@ export const TextGalleryItem = ({
   gridColumnStart,
   gridRowEnd,
   gridRowStart,
+  background,
 }: TextItemProps) => {
   return (
     <CustomContainer
@@ -23,6 +24,7 @@ export const TextGalleryItem = ({
       $gridColumnStart={gridColumnStart}
       $gridRowEnd={gridRowEnd}
       $gridRowStart={gridRowStart}
+      $background={background}
     >
       <MainContent>
         <Title>{title}</Title>

@@ -1,16 +1,21 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const CustomContainer = styled.div<{
     $gridRowStart: number;
     $gridRowEnd: number;
     $gridColumnStart: number;
     $gridColumnEnd: number;
+    $background?: string;
   }>`
     width: 100%;
     height: 100%;
     grid-row: ${(props) => `${props.$gridRowStart}/${props.$gridRowEnd}`};
     grid-column: ${(props) =>
       `${props.$gridColumnStart}/${props.$gridColumnEnd}`};
+    ${({ $background }) => $background && css`
+    background-image: url(${$background});
+    background-size: cover;
+    `};
 `;
   
 export const MainContent = styled.div`
@@ -30,7 +35,7 @@ export const Title = styled.p`
     &::before {
       content: "";
       position: absolute;
-      top: -10px;
+      top: -15px;
       left: 0;
       height: 15px;
       width: 30%;

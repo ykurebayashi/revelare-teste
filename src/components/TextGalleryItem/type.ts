@@ -7,4 +7,5 @@ export type TextItemProps = {
     gridRowEnd: number;
     gridColumnStart: number;
     gridColumnEnd: number;
+    background?: string ;
 };
