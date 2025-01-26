@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  width: 100px;
-  height: 100px;
+  width: 15dvh;
+  height: 15dvh;
   border-radius: 50%;
   border: 5px solid #1f6047;
   background: none;
@@ -11,8 +11,7 @@ export const Button = styled.button`
   overflow: hidden;
 
   &:hover {
-    height: 150px;
-    width: 150px;
+    transform: scale(1.4);
   }
 `;
 
