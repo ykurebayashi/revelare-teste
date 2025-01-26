@@ -10,11 +10,15 @@ import {
   LinkButton,
   RedirectButtonsConatiner,
 } from "./style";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Link } from "react-router";
+import { useOutsideClick } from "../../utils/useGetClickOutside";
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useOutsideClick(menuRef, () => setIsOpen(false));
   return (
     <MainContent>
       <Logo src={LogoSrc} alt="logo" />
@@ -25,7 +29,7 @@ export const Header = () => {
         </BurgerMenuButton>
       </FlexRow>
       {isOpen && (
-        <MenuOptions>
+        <MenuOptions ref={menuRef}>
           <RedirectButtonsConatiner>
             <Link to={"/"} style={{ width: "100%", textAlign: "center" }}>
               <LinkButton>Home</LinkButton>
