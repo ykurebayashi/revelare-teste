@@ -10,7 +10,10 @@ const Home = () => {
       <main>
         {gallerySection.map((item) => {
           return (
-            <ImageGallery division={item.division}>
+            <ImageGallery
+              division={item.division}
+              backgroundColor={item.backgroundColor}
+            >
               {item.galleryItems.map((galleryItem, index) => {
                 const Component =
                   galleryItem.component as React.ComponentType<GalleryItem>;

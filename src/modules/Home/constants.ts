@@ -7,6 +7,7 @@ import F3 from "../../assets/f3.jpg";
 import F4 from "../../assets/f4.jpg";
 import F5 from "../../assets/f5.jpg";
 import Bg2 from "../../assets/bg2.jpg";
+import Bg3 from "../../assets/bg3.jpg";
 
 const firstGallery: GalleryItem[] = [
   {
@@ -93,11 +94,37 @@ const thirdGallery: GalleryItem[] = [
     component: ImageGalleryItem,
   },
 ];
+const fourthGallery: GalleryItem[] = [
+  {
+    title: "A bondade começa com uma xícara",
+    subTitle: "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão delicioso e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
+    buttonText: "Saber mais",
+    buttonClick: () => alert("button function"),
+    gridColumnStart: 1,
+    gridColumnEnd: 1,
+    gridRowStart: 1,
+    gridRowEnd: 3,
+    component: TextGalleryItem,
+  },
+  {
+    alt: "coffe image",
+    gridColumnStart:2,
+    gridColumnEnd: 2,
+    gridRowStart: 1,
+    gridRowEnd: 3,
+    src: Bg3,
+    component: ImageGalleryItem,
+    imageFit: 'contain'
+  },
 
-export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[]}[] = [
+]
+//https://www.thecocktaildb.com/browse/search/?s=coffee
+
+export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[], backgroundColor?: string}[] = [
   {
     division: "third",
     galleryItems: firstGallery
+
   },
   {
     division: "half",
@@ -106,5 +133,11 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
   {
     division: "half",
     galleryItems: thirdGallery
+  },
+  {
+    division: "half",
+    galleryItems: fourthGallery,
+    backgroundColor: '#e7e9ed'
   }
+
 ]

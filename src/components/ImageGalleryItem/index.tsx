@@ -8,6 +8,7 @@ export const ImageGalleryItem = ({
   gridColumnStart,
   gridRowEnd,
   gridRowStart,
+  imageFit,
 }: ImageItemProps) => {
   return (
     <CustomImage
@@ -17,6 +18,7 @@ export const ImageGalleryItem = ({
       $gridColumnStart={gridColumnStart}
       $gridRowEnd={gridRowEnd}
       $gridRowStart={gridRowStart}
+      $imageFit={imageFit}
     />
   );
 };

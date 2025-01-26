@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export type ImageItemProps = {
     src: string;
     alt: string;
@@ -5,4 +7,5 @@ export type ImageItemProps = {
     gridRowEnd: number;
     gridColumnStart: number;
     gridColumnEnd: number;
+    imageFit?:CSSProperties["objectFit"]
 };
