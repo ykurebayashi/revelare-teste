@@ -61,3 +61,25 @@ export const HomepageButton = styled.button`
     transition: transform 0.3s ease;
   }
 `
+
+export const CategoryFilter = styled.aside`
+  position: absolute;
+  right: 0;
+  top: 20%;
+  border: 1px solid  #1f6047;
+  padding: 10px;
+  background-color: white;
+
+  h3 {
+    padding-bottom: 5px;
+    color: #1f6047;
+  }
+
+`
+
+export const ListItem = styled.li`
+  color: #1f6047;
+  font-size: 0.8em;
+  margin-left: 10px;
+  cursor: pointer;
+`

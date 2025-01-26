@@ -7,6 +7,8 @@ import {
   Main,
   PaginationButton,
   HomepageButton,
+  CategoryFilter,
+  ListItem,
 } from "./style";
 import { SearchContext } from "../../state/searchContext";
 
@@ -16,21 +18,31 @@ const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
   const context = useContext(SearchContext);
   const [page, setPage] = useState<number>(0);
+  const [category, setCategory] = useState<string>("");
 
   const usedData = useMemo(() => {
     const startIndex = page * MAX_RENDER;
     const endIndex = startIndex + MAX_RENDER;
 
-    const result = data?.drinks.slice(startIndex, endIndex);
+    let result = data?.drinks;
 
+    if (category) {
+      result = result?.filter((element) => {
+        return element.strCategory === category;
+      });
+    }
     if (context?.search) {
-      return result?.filter((element) =>
+      result = result?.filter((element) =>
         element.strDrink.toLowerCase().includes(context.search.toLowerCase())
       );
     }
 
-    return result;
-  }, [data, page, context?.search]);
+    return result?.slice(startIndex, endIndex);
+  }, [data, page, context?.search, category]);
+
+  const categories = useMemo(() => {
+    return [...new Set(data?.drinks?.map((element) => element.strCategory))];
+  }, [data]);
 
   useEffect(() => {
     setPage(0);
@@ -65,7 +77,12 @@ const Blog = () => {
           &lt; <span>Back</span>
         </PaginationButton>
 
-        <HomepageButton disabled={page === 0} onClick={() => setPage(0)}>
+        <HomepageButton
+          onClick={() => {
+            setPage(0);
+            setCategory("");
+          }}
+        >
           Initial Page
         </HomepageButton>
 
@@ -77,6 +94,19 @@ const Blog = () => {
           <span>Next</span> &gt;
         </PaginationButton>
       </PaginationButtons>
+      <CategoryFilter>
+        <h3>Categorias:</h3>
+        <ul>
+          {categories.map((element) => {
+            return (
+              <ListItem onClick={() => setCategory(element)}>
+                {element}
+              </ListItem>
+            );
+          })}
+          <ListItem onClick={() => setCategory("")}>Limpar</ListItem>
+        </ul>
+      </CategoryFilter>
     </Main>
   );
 };
