@@ -39,3 +39,43 @@ export const BurgerMenuButton = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+export const MenuOptions = styled.div`
+  width: 300px;
+  height: 100dvh;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+`
+
+export const RedirectButtonsConatiner = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1em;
+`
+
+export const LinkButton = styled.span`
+    position: relative;
+    font-weight: bolder;
+    font-size: 2em;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background-color: #1f6047;
+    }
+`

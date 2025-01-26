@@ -6,19 +6,38 @@ import {
   FlexRow,
   Logo,
   SearchInput,
+  MenuOptions,
+  LinkButton,
+  RedirectButtonsConatiner,
 } from "./style";
-import { HeaderProps } from "./type";
+import { useState } from "react";
+import { Link } from "react-router";
 
-export const Header = ({ onClickMenu }: HeaderProps) => {
+export const Header = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <MainContent>
       <Logo src={LogoSrc} alt="logo" />
       <FlexRow>
         <SearchInput type="text" placeholder="Pesquisar" />
-        <BurgerMenuButton onClick={onClickMenu} aria-haspopup="true">
+        <BurgerMenuButton onClick={() => setIsOpen(true)} aria-haspopup="true">
           <Menu />
         </BurgerMenuButton>
       </FlexRow>
+      {isOpen && (
+        <MenuOptions>
+          <RedirectButtonsConatiner>
+            <Link to={"/"} style={{ width: "100%", textAlign: "center" }}>
+              <LinkButton>Home</LinkButton>
+            </Link>
+            <Link to={"/blog"} style={{ width: "100%", textAlign: "center" }}>
+              <LinkButton>Blog</LinkButton>
+            </Link>
+          </RedirectButtonsConatiner>
+
+          <LinkButton onClick={() => setIsOpen(false)}>Close</LinkButton>
+        </MenuOptions>
+      )}
     </MainContent>
   );
 };
