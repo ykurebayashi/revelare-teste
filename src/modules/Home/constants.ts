@@ -119,7 +119,6 @@ const fourthGallery: GalleryItem[] = [
   },
 
 ]
-//https://www.thecocktaildb.com/browse/search/?s=coffee
 
 export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[], backgroundColor?: string, columns?: number}[] = [
   {
