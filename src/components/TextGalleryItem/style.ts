@@ -23,7 +23,7 @@ export const MainContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 20%;
+    padding: 10%;
     height: 100%;
     gap: 1.6em;
 `;
@@ -31,7 +31,7 @@ export const MainContent = styled.div`
 export const Title = styled.p`
     position: relative;
     font-weight: bolder;
-    font-size: 2em;
+    font-size: 3em;
     &::before {
       content: "";
       position: absolute;

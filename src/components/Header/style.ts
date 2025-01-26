@@ -8,6 +8,7 @@ export const MainContent = styled.header`
   align-items: center;
   padding: 0 4em;
   border-top: 10px solid #1f6047;
+  border-bottom: 1px solid #1f6047;
   background-color: white;
   z-index: 100;
   position: sticky;
