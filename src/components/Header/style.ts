@@ -40,7 +40,7 @@ export const BurgerMenuButton = styled.button`
   cursor: pointer;
 `;
 
-export const MenuOptions = styled.div`
+export const MenuOptions = styled.aside`
   width: 300px;
   height: 100dvh;
   background-color: rgba(255, 255, 255, 0.9);
@@ -54,13 +54,14 @@ export const MenuOptions = styled.div`
   flex-direction: column;
   gap: 20px;
   animation: slideIn 0.5s forwards; 
+  background-color: #00754a;
 
   @keyframes slideIn {
     0% {
-      right: -300px; /* Começa fora da tela */
+      right: -300px;
     }
     100% {
-      right: 0; /* Termina na posição normal */
+      right: 0; 
     }
   }
 `
@@ -78,6 +79,7 @@ export const LinkButton = styled.span`
     font-weight: bolder;
     font-size: 2em;
     cursor: pointer;
+    color: white;
 
     &::before {
       content: "";
