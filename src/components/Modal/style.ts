@@ -7,7 +7,7 @@ export const StyledDialog = styled.dialog`
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -17,7 +17,7 @@ export const StyledDialog = styled.dialog`
 export const MainContent = styled.div<{$width?: string; $height?: string;}>`
     width: ${({ $width }) => $width || "100%"};
     height: ${({ $height }) => $height || "100%"};
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255);
     position: relative;
     border-radius: 5px;
     padding: 2em;

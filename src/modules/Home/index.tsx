@@ -14,10 +14,12 @@ import Bg4 from "../../assets/bg4.jpg";
 import { useCheckMobile } from "../../utils/useCheckMobile";
 import { Modal } from "../../components/Modal";
 import { useState } from "react";
+import { TextGalleryItem } from "../../components/TextGalleryItem";
 
 const Home = () => {
   const { isMobile } = useCheckMobile();
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [modalInfo, setModalInfo] = useState<number | null>(null);
+  console.log(modalInfo);
 
   return (
     <main>
@@ -31,9 +33,10 @@ const Home = () => {
           caminho
         </SubtitleDescription>
         <OptionsDiv>
-          {coffeeButtons.map((element) => {
+          {coffeeButtons.map((element, index) => {
             return (
               <RoundInfo
+                key={`button-round-${index}`}
                 isMobile={isMobile}
                 alt={element.alt}
                 background={element.background}
@@ -50,15 +53,17 @@ const Home = () => {
             columns={item.columns}
             isMobile={isMobile}
             id={`section-${index}`}
+            key={`section-${index}`}
           >
-            {item.galleryItems.map((galleryItem, index) => {
+            {item.galleryItems.map((galleryItem, itemIndex) => {
               const Component =
                 galleryItem.component as React.ComponentType<GalleryItem>;
+
               return (
                 <Component
-                  key={index}
+                  key={`button-round-${itemIndex}`}
                   {...galleryItem}
-                  buttonClick={() => setIsOpen(true)}
+                  buttonClick={() => setModalInfo(index + 1)}
                 />
               );
             })}
@@ -70,15 +75,21 @@ const Home = () => {
           <BannerImage src={Bg4} alt="Armário com acessórios para café e chá" />
         </EndSection>
       )}
-      {isOpen && (
+
+      {!!modalInfo && (
         <Modal
           onClose={() => {
-            setIsOpen(false);
+            setModalInfo(null);
           }}
-          width="350px"
-          height="200px"
+          width={isMobile ? "90%" : "50%"}
+          height={isMobile ? "60dvh" : "40dvh"}
         >
-          <p>oi</p>
+          <TextGalleryItem
+            title="Lorem Ipsum Dolor"
+            subTitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget odio non arcu feugiat imperdiet nec sed leo. Sed lectus mauris, fringilla sit amet accumsan at, pellentesque vitae ipsum. Nullam"
+            buttonClick={() => setModalInfo(null)}
+            buttonText="Fechar"
+          />
         </Modal>
       )}
     </main>

@@ -3,9 +3,9 @@ export type TextItemProps = {
     subTitle?: string;
     buttonText?: string;
     buttonClick?: () => void;
-    gridRowStart: number;
-    gridRowEnd: number;
-    gridColumnStart: number;
-    gridColumnEnd: number;
+    gridRowStart?: number;
+    gridRowEnd?: number;
+    gridColumnStart?: number;
+    gridColumnEnd?: number;
     background?: string ;
 };

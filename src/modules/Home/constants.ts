@@ -99,7 +99,6 @@ const fourthGallery: GalleryItem[] = [
     title: "A bondade começa com uma xícara",
     subTitle: "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão delicioso e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
     buttonText: "Saber mais",
-    buttonClick: () => alert("button function"),
     gridColumnStart: 1,
     gridColumnEnd: 1,
     gridRowStart: 1,
@@ -124,7 +123,6 @@ export const gallerySection: {division: 'third'  | 'half', galleryItems: Gallery
   {
     division: "third",
     galleryItems: firstGallery
-
   },
   {
     division: "half",

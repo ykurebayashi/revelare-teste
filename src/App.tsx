@@ -8,8 +8,14 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        {RoutesList.map((routes) => {
-          return <Route path={routes.path} element={routes.element()} />;
+        {RoutesList.map((routes, index) => {
+          return (
+            <Route
+              key={`route-${index}`}
+              path={routes.path}
+              element={routes.element()}
+            />
+          );
         })}
       </Routes>
       <Footer />

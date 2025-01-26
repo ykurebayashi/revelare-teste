@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const CustomContainer = styled.div<{
-    $gridRowStart: number;
-    $gridRowEnd: number;
-    $gridColumnStart: number;
-    $gridColumnEnd: number;
+    $gridRowStart?: number;
+    $gridRowEnd?: number;
+    $gridColumnStart?: number;
+    $gridColumnEnd?: number;
     $background?: string;
   }>`
     width: 100%;
