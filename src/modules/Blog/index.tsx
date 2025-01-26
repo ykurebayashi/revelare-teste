@@ -6,6 +6,7 @@ import {
   PaginationButtons,
   Main,
   PaginationButton,
+  HomepageButton,
 } from "./style";
 
 const MAX_RENDER = 6;
@@ -35,7 +36,6 @@ const Blog = () => {
                   date={element.dateModified}
                   img={element.strDrinkThumb || ""}
                   category={element.strCategory}
-                  alcoholic={element.strAlcoholic !== "Non alcoholic"}
                 />
               );
             })}
@@ -47,14 +47,19 @@ const Blog = () => {
           disabled={page === 0}
           onClick={() => setPage(page - 1)}
         >
-          Back
+          &lt; <span>Back</span>
         </PaginationButton>
+
+        <HomepageButton disabled={page === 0} onClick={() => setPage(0)}>
+          Initial Page
+        </HomepageButton>
 
         <PaginationButton
           disabled={(usedData?.length ?? 0) < 6}
           onClick={() => setPage(page + 1)}
+          $moveRight
         >
-          Next
+          <span>Next</span> &gt;
         </PaginationButton>
       </PaginationButtons>
     </Main>
