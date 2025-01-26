@@ -35,7 +35,7 @@ export const CoffeeCard = ({
         />
       </ContainerImage>
 
-      <Link to={`/blog/${id}`}>
+      <Link to={`/blog/post/${id}`}>
         <CheckRecipeButton>Check Recipe</CheckRecipeButton>
       </Link>
       <BottomRightText>
