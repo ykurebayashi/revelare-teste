@@ -1,20 +1,34 @@
 import { useGetCoffeeRecipes } from "../../query/useGetCoffees";
+import { CoffeeCard } from "../../components/CoffeeCard";
+import { useMemo } from "react";
+import { MainContent } from "./style";
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
 
+  const usedData = useMemo(() => {
+    return data;
+  }, [data]);
+
   return (
-    <div>
+    <MainContent>
       {isLoading ? (
         "Loading"
       ) : (
         <>
-          {data?.drinks.map((element) => {
-            return <p>{element?.strDrink}</p>;
+          {usedData?.drinks.map((element) => {
+            return (
+              <CoffeeCard
+                title={element.strDrink}
+                date={element.dateModified}
+                img={element.strDrinkThumb || ""}
+                category={element.strCategory}
+              />
+            );
           })}
         </>
       )}
-    </div>
+    </MainContent>
   );
 };
 
