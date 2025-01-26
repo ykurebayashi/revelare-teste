@@ -39,4 +39,6 @@ export const EndDiv = styled.div`
 `
 export const BannerImage = styled.img`
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 `
