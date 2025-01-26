@@ -31,14 +31,14 @@ export const MainContent = styled.div`
 export const Title = styled.p`
     position: relative;
     font-weight: bolder;
-    font-size: 2.5em;
+    font-size: 2em;
     &::before {
       content: "";
       position: absolute;
       top: -15px;
       left: 0;
       height: 15px;
-      width: 30%;
+      width: 45%;
       background-color: green;
     }
 `;
