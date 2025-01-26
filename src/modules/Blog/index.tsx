@@ -31,6 +31,7 @@ const Blog = () => {
         return element.strCategory === category;
       });
     }
+
     if (context?.search) {
       result = result?.filter((element) =>
         element.strDrink.toLowerCase().includes(context.search.toLowerCase())
@@ -46,7 +47,7 @@ const Blog = () => {
 
   useEffect(() => {
     setPage(0);
-  }, [context?.search]);
+  }, [context?.search, category]);
 
   return (
     <Main>
@@ -74,7 +75,7 @@ const Blog = () => {
           disabled={page === 0}
           onClick={() => setPage(page - 1)}
         >
-          &lt; <span>Back</span>
+          &lt; <span>Anterior</span>
         </PaginationButton>
 
         <HomepageButton
@@ -83,7 +84,7 @@ const Blog = () => {
             setCategory("");
           }}
         >
-          Initial Page
+          Redefinir
         </HomepageButton>
 
         <PaginationButton
@@ -91,7 +92,7 @@ const Blog = () => {
           onClick={() => setPage(page + 1)}
           $moveRight
         >
-          <span>Next</span> &gt;
+          <span>Próxima</span> &gt;
         </PaginationButton>
       </PaginationButtons>
       <CategoryFilter>
