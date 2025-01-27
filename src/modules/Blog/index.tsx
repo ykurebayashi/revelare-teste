@@ -7,8 +7,7 @@ import {
   Main,
   PaginationButton,
   HomepageButton,
-  CategoryFilter,
-  ListItem,
+  CategoryText,
 } from "./style";
 import { SearchContext } from "../../state/searchContext";
 import { useGetBlogPageData } from "./hook";
@@ -56,7 +55,7 @@ const Blog = () => {
             setCategory("");
           }}
         >
-          Redefinir
+          Início
         </HomepageButton>
 
         <PaginationButton
@@ -70,6 +69,26 @@ const Blog = () => {
         >
           <span>Próxima</span> &gt;
         </PaginationButton>
+      </PaginationButtons>
+      <PaginationButtons $index={99}>
+        <CategoryText>Categorias:</CategoryText>
+        {categories.map((currentCatg) => {
+          return (
+            <PaginationButton
+              onClick={() => {
+                if (currentCatg === category) {
+                  setCategory("");
+                } else {
+                  setCategory(currentCatg);
+                }
+                scrollToTop();
+              }}
+              $isMobile={isMobile}
+            >
+              {currentCatg}
+            </PaginationButton>
+          );
+        })}
       </PaginationButtons>
       <MainContent>
         {isLoading ? (
@@ -92,24 +111,6 @@ const Blog = () => {
           </>
         )}
       </MainContent>
-
-      <CategoryFilter>
-        <h3>Categorias:</h3>
-        <ul>
-          {categories.map((element) => {
-            return (
-              <ListItem
-                onClick={() => setCategory(element)}
-                $isSelected={element.toLowerCase() === category.toLowerCase()}
-                key={element}
-              >
-                {element}
-              </ListItem>
-            );
-          })}
-          <ListItem onClick={() => setCategory("")}>Limpar</ListItem>
-        </ul>
-      </CategoryFilter>
     </Main>
   );
 };

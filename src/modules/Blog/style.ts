@@ -27,19 +27,19 @@ export const MainContent = styled.div`
   }
 `;
 
-export const PaginationButtons = styled.div`
+export const PaginationButtons = styled.div<{ $index?: number }>`
   width: 100%;
-  border-bottom: 1px solid #1f6047;
+  border-bottom: 1px solid white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #1f6047;
   height: 7vh;
   padding: 0.5em;
-  gap: 5px;
+  gap: 25px;
   position: sticky;
   top: 12vh;
-  z-index: 100;
+  z-index: ${(props) => props.$index ?? 100};
 `;
 export const PaginationButton = styled.button<{
   $moveRight?: boolean;
@@ -78,24 +78,6 @@ export const HomepageButton = styled.button`
   }
 `;
 
-export const CategoryFilter = styled.aside`
-  position: absolute;
-  right: 0;
-  top: 25%;
-  border: 1px solid #1f6047;
-  padding: 10px;
-  background-color: white;
-
-  h3 {
-    padding-bottom: 5px;
-    color: #1f6047;
-  }
-`;
-
-export const ListItem = styled.li<{ $isSelected?: boolean }>`
-  color: #1f6047;
-  font-size: ${(props) => (props.$isSelected ? "1em" : "0.8em")};
-  margin-left: 10px;
-  cursor: pointer;
-  font-weight: ${(props) => (props.$isSelected ? "700" : "400")};
+export const CategoryText = styled.p`
+  color: white;
 `;
