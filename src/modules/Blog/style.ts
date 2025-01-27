@@ -5,7 +5,7 @@ export const Main = styled.main`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-`
+`;
 
 export const MainContent = styled.div`
   display: flex;
@@ -30,22 +30,22 @@ export const PaginationButtons = styled.div`
   height: 7vh;
   padding: 0.5em;
   gap: 5px;
-`
-export const PaginationButton = styled.button<{$moveRight?: boolean;}>`
+`;
+export const PaginationButton = styled.button<{ $moveRight?: boolean }>`
   background: none;
   border: none;
   width: 100px;
   height: 100%;
   cursor: pointer;
   color: black;
-  transform: translateX(${props => props.$moveRight ? '-15px': '15px' });
+  transform: translateX(${(props) => (props.$moveRight ? "-15px" : "15px")});
 
   &:hover {
     color: #1f6047;
     transform: translateX(0px);
     transition: transform 0.3s ease;
   }
-`
+`;
 export const HomepageButton = styled.button`
   background: none;
   border: none;
@@ -60,13 +60,13 @@ export const HomepageButton = styled.button`
     transform: translateY(-10px);
     transition: transform 0.3s ease;
   }
-`
+`;
 
 export const CategoryFilter = styled.aside`
   position: absolute;
   right: 0;
   top: 25%;
-  border: 1px solid  #1f6047;
+  border: 1px solid #1f6047;
   padding: 10px;
   background-color: white;
 
@@ -74,13 +74,12 @@ export const CategoryFilter = styled.aside`
     padding-bottom: 5px;
     color: #1f6047;
   }
+`;
 
-`
-
-export const ListItem = styled.li<{$isSelected?: boolean}>`
+export const ListItem = styled.li<{ $isSelected?: boolean }>`
   color: #1f6047;
-  font-size: ${props => props.$isSelected ? '1em' : '0.8em'};
+  font-size: ${(props) => (props.$isSelected ? "1em" : "0.8em")};
   margin-left: 10px;
   cursor: pointer;
-  font-weight: ${props => props.$isSelected ? '700' : '400'};
-`
+  font-weight: ${(props) => (props.$isSelected ? "700" : "400")};
+`;

@@ -15,7 +15,8 @@ import C3 from "../../assets/c3.jpg";
 const firstGallery: GalleryItem[] = [
   {
     title: "Quatro Bebidas, Um Milhão de Razões",
-    subTitle: "Lady Gaga e a starbucks compartilham uma missão: construir um mundo mais amável e corajoso. Por meio da Fundação Born This Way, Lady Gaga inspirou seus fãs a abraçarem a bondade em suas comunidades - online e no mundo todo. Com a sua ajuda, podemos capacitar os jovens a espalhar mais gentileza.", 
+    subTitle:
+      "Lady Gaga e a starbucks compartilham uma missão: construir um mundo mais amável e corajoso. Por meio da Fundação Born This Way, Lady Gaga inspirou seus fãs a abraçarem a bondade em suas comunidades - online e no mundo todo. Com a sua ajuda, podemos capacitar os jovens a espalhar mais gentileza.",
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
@@ -24,7 +25,7 @@ const firstGallery: GalleryItem[] = [
     component: TextGalleryItem,
   },
   {
-    alt:"Quatro copos de plástico de café, cada um com uma letra formando a palavra 'GAGA'",
+    alt: "Quatro copos de plástico de café, cada um com uma letra formando a palavra 'GAGA'",
     gridColumnStart: 1,
     gridColumnEnd: 1,
     gridRowStart: 3,
@@ -53,15 +54,17 @@ const secondGallery: GalleryItem[] = [
     component: ImageGalleryItem,
   },
   {
-    title: "Apresentando Vanilla Sweet Cream Cold Brew - Doce, Cremoso, Frio, Ousado",
-    subTitle: "Pouco antes de servir, nosso café starbucks cold brew de mistura lenta e personalizada é coberto com um delicado creme de baunilha doce feito em casa que se espalha por toda a xícara",
+    title:
+      "Apresentando Vanilla Sweet Cream Cold Brew - Doce, Cremoso, Frio, Ousado",
+    subTitle:
+      "Pouco antes de servir, nosso café starbucks cold brew de mistura lenta e personalizada é coberto com um delicado creme de baunilha doce feito em casa que se espalha por toda a xícara",
     buttonText: "Saber mais",
     gridColumnStart: 2,
     gridColumnEnd: 2,
     gridRowStart: 1,
     gridRowEnd: 1,
-    modalDescription: 'Teste de nova descrição',
-    modalTitle: 'Teste de novo title',
+    modalDescription: "Teste de nova descrição",
+    modalTitle: "Teste de novo title",
     component: TextGalleryItem,
   },
   {
@@ -77,14 +80,15 @@ const secondGallery: GalleryItem[] = [
 const thirdGallery: GalleryItem[] = [
   {
     title: "Chegou o novo ultra caramel frappuccino!",
-    subTitle: "Parabéns por fazer isso! Isso exige caramelo. Com creme de leite fresco. Chegou o novo ultra caramel frappuccino!",
+    subTitle:
+      "Parabéns por fazer isso! Isso exige caramelo. Com creme de leite fresco. Chegou o novo ultra caramel frappuccino!",
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
     gridRowStart: 1,
     gridRowEnd: 3,
     component: TextGalleryItem,
-    background:Bg2
+    background: Bg2,
   },
   {
     alt: "Pessoa tomando um copo de café por um canudo",
@@ -99,7 +103,8 @@ const thirdGallery: GalleryItem[] = [
 const fourthGallery: GalleryItem[] = [
   {
     title: "A bondade começa com uma xícara",
-    subTitle: "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão deliciosos e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
+    subTitle:
+      "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão deliciosos e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
@@ -109,43 +114,46 @@ const fourthGallery: GalleryItem[] = [
   },
   {
     alt: "Quatro copos de plástico de café, cada um de um sabor e cor diferente",
-    gridColumnStart:2,
+    gridColumnStart: 2,
     gridColumnEnd: 4,
     gridRowStart: 1,
     gridRowEnd: 3,
     src: Bg3,
     component: ImageGalleryItem,
-    imageFit: 'fill'
+    imageFit: "fill",
   },
+];
 
-]
-
-export const gallerySection: {division: 'third'  | 'half', galleryItems: GalleryItem[], backgroundColor?: string, columns?: number}[] = [
+export const gallerySection: {
+  division: "third" | "half";
+  galleryItems: GalleryItem[];
+  backgroundColor?: string;
+  columns?: number;
+}[] = [
   {
     division: "third",
-    galleryItems: firstGallery
+    galleryItems: firstGallery,
   },
   {
     division: "half",
-    galleryItems: secondGallery
+    galleryItems: secondGallery,
   },
   {
     division: "half",
-    galleryItems: thirdGallery
+    galleryItems: thirdGallery,
   },
   {
     division: "half",
     galleryItems: fourthGallery,
-    backgroundColor: '#e7e9ed',
-    columns: 3
-  }
-
-]
+    backgroundColor: "#e7e9ed",
+    columns: 3,
+  },
+];
 
 export const coffeeButtons = [
   {
-  background: C1,
-  alt: "Copo de café com chantilly e cor de caramelo",
+    background: C1,
+    alt: "Copo de café com chantilly e cor de caramelo",
   },
   {
     background: C2,
@@ -154,4 +162,5 @@ export const coffeeButtons = [
   {
     background: C3,
     alt: "Copo de café com chantilly e cor verde",
-}];
+  },
+];

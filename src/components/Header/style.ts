@@ -53,7 +53,7 @@ export const MenuOptions = styled.aside`
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  animation: slideIn 0.5s forwards; 
+  animation: slideIn 0.5s forwards;
   background-color: #00754a;
 
   @keyframes slideIn {
@@ -61,10 +61,10 @@ export const MenuOptions = styled.aside`
       right: -300px;
     }
     100% {
-      right: 0; 
+      right: 0;
     }
   }
-`
+`;
 
 export const RedirectButtonsConatiner = styled.nav`
   display: flex;
@@ -72,22 +72,22 @@ export const RedirectButtonsConatiner = styled.nav`
   align-items: flex-start;
   flex-direction: column;
   gap: 1em;
-`
+`;
 
 export const LinkButton = styled.span`
-    position: relative;
-    font-weight: bolder;
-    font-size: 2em;
-    cursor: pointer;
-    color: white;
+  position: relative;
+  font-weight: bolder;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -5px;
-      left: 0;
-      height: 5px;
-      width: 100%;
-      background-color: #1f6047;
-    }
-`
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #1f6047;
+  }
+`;

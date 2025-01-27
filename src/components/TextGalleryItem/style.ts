@@ -6,7 +6,7 @@ type CustomContainerType = {
   $gridColumnStart?: number;
   $gridColumnEnd?: number;
   $background?: string;
-}
+};
 
 export const CustomContainer = styled.div<CustomContainerType>`
   width: 100%;
@@ -14,12 +14,14 @@ export const CustomContainer = styled.div<CustomContainerType>`
   grid-row: ${(props) => `${props.$gridRowStart}/${props.$gridRowEnd}`};
   grid-column: ${(props) =>
     `${props.$gridColumnStart}/${props.$gridColumnEnd}`};
-  ${({ $background }) => $background && css`
-  background-image: url(${$background});
-  background-size: cover;
-  `};
+  ${({ $background }) =>
+    $background &&
+    css`
+      background-image: url(${$background});
+      background-size: cover;
+    `};
 `;
-  
+
 export const MainContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@ export const MainContent = styled.div`
   height: 100%;
   gap: 1.6em;
 `;
-  
+
 export const Title = styled.h2`
   position: relative;
   font-weight: bolder;
@@ -44,13 +46,13 @@ export const Title = styled.h2`
     background-color: #1f6047;
   }
 `;
-  
+
 export const Description = styled.h3`
   font-size: 1.2em;
   text-align: justify;
   font-weight: 400;
 `;
-  
+
 export const Button = styled.button`
   padding: 0.7em 1.2em;
   text-align: center;
@@ -64,4 +66,3 @@ export const Button = styled.button`
     transform: translateY(-5px);
   }
 `;
-  

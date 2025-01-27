@@ -1,4 +1,4 @@
 export type HeaderProps = {
-    search: string;
-    setSearch: (param: string) => void;
-}
+  search: string;
+  setSearch: (param: string) => void;
+};

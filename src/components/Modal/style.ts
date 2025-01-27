@@ -15,9 +15,9 @@ export const StyledDialog = styled.dialog`
 `;
 
 type MainContentType = {
-  $width?: string; 
+  $width?: string;
   $height?: string;
-}
+};
 
 export const MainContent = styled.div<MainContentType>`
   width: ${({ $width }) => $width || "100%"};
@@ -28,7 +28,6 @@ export const MainContent = styled.div<MainContentType>`
   padding: 2em;
   animation: showUpFromBottom 0.5s ease-out forwards;
 
-
   @keyframes showUpFromBottom {
     0% {
       transform: translate(0%, 200%);
@@ -37,7 +36,7 @@ export const MainContent = styled.div<MainContentType>`
       transform: translate(0%, -0%);
     }
   }
-`  
+`;
 
 export const CloseButton = styled.button`
   position: absolute;

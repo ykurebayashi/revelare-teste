@@ -53,7 +53,7 @@ export const BottomRightText = styled.p`
   bottom: 10px;
   right: 10px;
   width: fit-content;
-    color: #1f6047;
+  color: #1f6047;
 `;
 
 export const IconsContainer = styled.div`
@@ -62,7 +62,7 @@ export const IconsContainer = styled.div`
   left: 10px;
   display: flex;
   gap: 10px;
-`
+`;
 export const BottomLeftImage = styled.img`
   width: 20px;
 `;
@@ -75,4 +75,4 @@ export const CheckRecipeButton = styled.button`
   color: #1f6047;
   border-radius: 50px;
   cursor: pointer;
-`
+`;
