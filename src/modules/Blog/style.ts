@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Main = styled.main`
   display: flex;
@@ -41,19 +41,27 @@ export const PaginationButtons = styled.div`
   top: 12vh;
   z-index: 100;
 `;
-export const PaginationButton = styled.button<{ $moveRight?: boolean }>`
+export const PaginationButton = styled.button<{
+  $moveRight?: boolean;
+  $isMobile?: boolean;
+}>`
   background: none;
   border: none;
   width: 100px;
   height: 100%;
   cursor: pointer;
   color: white;
-  transform: translateX(${(props) => (props.$moveRight ? "-15px" : "15px")});
 
-  &:hover {
-    transform: translateX(0px);
-    transition: transform 0.3s ease;
-  }
+  ${({ $isMobile, $moveRight }) =>
+    !$isMobile &&
+    css`
+      transform: translateX(${$moveRight ? "-15px" : "15px"});
+
+      &:hover {
+        transform: translateX(0px);
+        transition: transform 0.3s ease;
+      }
+    `}
 `;
 export const HomepageButton = styled.button`
   background: none;

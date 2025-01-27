@@ -13,9 +13,12 @@ import {
 import { SearchContext } from "../../state/searchContext";
 import { useGetBlogPageData } from "./hook";
 import { scrollToTop } from "../../utils/useAutoScroll";
+import { useCheckMobile } from "../../utils/useCheckMobile";
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
+
+  const { isMobile } = useCheckMobile();
 
   const context = useContext(SearchContext);
 
@@ -42,6 +45,7 @@ const Blog = () => {
             setPage(page - 1);
             scrollToTop();
           }}
+          $isMobile={isMobile}
         >
           &lt; <span>Anterior</span>
         </PaginationButton>
@@ -61,6 +65,7 @@ const Blog = () => {
             setPage(page + 1);
             scrollToTop();
           }}
+          $isMobile={isMobile}
           $moveRight
         >
           <span>Próxima</span> &gt;
