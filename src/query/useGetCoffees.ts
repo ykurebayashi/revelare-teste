@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"
 import axios from "axios";
 
-type CoffeeSingleType = {
+export type CoffeeSingleType = {
     idDrink: string;
     dateModified: string;
     strAlcoholic: string;

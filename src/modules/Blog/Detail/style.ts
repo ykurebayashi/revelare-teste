@@ -66,3 +66,11 @@ export const BackPageButton = styled.button`
     transition: transform 0.3s ease;
   }
 `
+export const LoadingContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1f6047;
+`;

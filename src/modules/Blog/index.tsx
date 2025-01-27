@@ -1,6 +1,6 @@
 import { useGetCoffeeRecipes } from "../../query/useGetCoffees";
 import { CoffeeCard } from "../../components/CoffeeCard";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import {
   MainContent,
   PaginationButtons,
@@ -11,7 +11,7 @@ import {
   ListItem,
 } from "./style";
 import { SearchContext } from "../../state/searchContext";
-import { MAX_RENDER } from "./constants";
+import { useGetBlogPageData } from "./hook";
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
@@ -21,30 +21,12 @@ const Blog = () => {
   const [page, setPage] = useState<number>(0);
   const [category, setCategory] = useState<string>("");
 
-  const usedData = useMemo(() => {
-    const startIndex = page * MAX_RENDER;
-    const endIndex = startIndex + MAX_RENDER;
-
-    let result = data?.drinks;
-
-    if (category) {
-      result = result?.filter((element) => {
-        return element.strCategory === category;
-      });
-    }
-
-    if (context?.search) {
-      result = result?.filter((element) =>
-        element.strDrink.toLowerCase().includes(context.search.toLowerCase())
-      );
-    }
-
-    return result?.slice(startIndex, endIndex);
-  }, [data, page, context?.search, category]);
-
-  const categories = useMemo(() => {
-    return [...new Set(data?.drinks?.map((element) => element.strCategory))];
-  }, [data]);
+  const { usedData, categories } = useGetBlogPageData({
+    category,
+    data: data,
+    page,
+    search: context?.search || "",
+  });
 
   useEffect(() => {
     setPage(0);
