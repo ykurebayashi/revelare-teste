@@ -3,7 +3,7 @@ import Bg from "../../assets/bg.jpg";
 
 export const WelcomeSection = styled.section<{ $isMobile: boolean }>`
   width: 100%;
-  height: 85dvh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

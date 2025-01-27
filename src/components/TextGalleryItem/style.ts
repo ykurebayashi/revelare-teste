@@ -61,6 +61,7 @@ export const Button = styled.button`
   box-shadow: 0px 0px 20px -8px #888888;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
+  color: inherit;
 
   &:hover {
     transform: translateY(-5px);

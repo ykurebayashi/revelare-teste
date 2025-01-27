@@ -40,6 +40,8 @@ export const MainContent = styled.div<MainContentType>`
 
 export const CloseButton = styled.button`
   position: absolute;
+  width: 20px;
+  height: 20px;
   top: 10px;
   right: 10px;
   background: transparent;

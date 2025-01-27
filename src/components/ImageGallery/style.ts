@@ -14,7 +14,7 @@ export const MainGrid = styled.section<MainGridType>`
       display: grid;
 
       grid-template-rows: repeat(
-        ${$division === "half" ? "2, 50dvh" : "3, 33.33dvh"}
+        ${$division === "half" ? "2, 50vh" : "3, 33.33vh"}
       );
 
       grid-template-columns: repeat(

@@ -54,7 +54,7 @@ export const TextGalleryItem = ({
             setModalInfo(false);
           }}
           width={isMobile ? "90%" : "50%"}
-          height={isMobile ? "60dvh" : "50dvh"}
+          height={isMobile ? "70vh" : "50vh"}
         >
           <TextGalleryItem
             title={modalTitle ?? "Lorem Ipsum Dolor"}

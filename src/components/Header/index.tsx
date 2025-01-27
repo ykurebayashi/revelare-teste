@@ -44,7 +44,7 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
           onChange={(e) => setCurrentValue(e.target.value)}
         />
         <BurgerMenuButton onClick={() => setIsOpen(true)} aria-haspopup="true">
-          <Menu />
+          <Menu color="#1f6047" />
         </BurgerMenuButton>
       </FlexRow>
       {isOpen && (

@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const MainContent = styled.header`
-  height: 15dvh;
+  height: 15vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4em;
+  padding: 0 2em;
   border-top: 10px solid #1f6047;
   border-bottom: 1px solid #1f6047;
   background-color: white;
@@ -42,7 +42,7 @@ export const BurgerMenuButton = styled.button`
 
 export const MenuOptions = styled.aside`
   width: 300px;
-  height: 100dvh;
+  height: 100vh;
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
