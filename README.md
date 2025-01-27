@@ -52,3 +52,9 @@ Durante o desenvolvimento do projeto não houve acesso a nenhum software de desi
 Essas decisões foram feitas utilizando referências visuais disponíveis e estimativas para garantir que a aplicação fosse funcional e visualmente consistente.
 
 ---
+
+### Rodar o projeto
+- Clone o repositório
+- Instale as dependências (```yarn```)
+- Rode o projeto localmente com ```yarn dev```
+- Caso deseje colocar o projeto hosteado ```yarn dev --host```
