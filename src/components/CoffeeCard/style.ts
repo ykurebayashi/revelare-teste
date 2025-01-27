@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainCard = styled.div`
+export const MainCard = styled.article`
   width: 350px;
   min-height: 275px;
   border: 1px solid green;

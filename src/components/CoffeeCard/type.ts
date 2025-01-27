@@ -1,6 +1,6 @@
 export type CoffeeCardProps = {
   title: string;
-  date: Date | string;
+  date:string;
   img: string;
   category: string;
   id: string;

@@ -66,7 +66,7 @@ export const MenuOptions = styled.aside`
   }
 `
 
-export const RedirectButtonsConatiner = styled.div`
+export const RedirectButtonsConatiner = styled.nav`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;

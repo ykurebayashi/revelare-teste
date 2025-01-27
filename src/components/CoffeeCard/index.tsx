@@ -29,20 +29,17 @@ export const CoffeeCard = ({
         <Category>{category}</Category>
       </TitleContainer>
       <ContainerImage>
-        <RoundInfo
-          alt={`food: ${title}, category: ${category}`}
-          background={img}
-        />
+        <RoundInfo alt="Imagem da bebida ensinada no post" background={img} />
       </ContainerImage>
 
       <Link to={`/blog/post/${id}`}>
-        <CheckRecipeButton>Check Recipe</CheckRecipeButton>
+        <CheckRecipeButton>Ver Receita</CheckRecipeButton>
       </Link>
       <BottomRightText>
-        {typeof date === "string" ? formatDate(date) : date.toDateString()}
+        <time dateTime={new Date(date).toISOString()}>{formatDate(date)}</time>
       </BottomRightText>
       <IconsContainer>
-        <BottomLeftImage alt="Starbucks logo" src={Logo} />
+        <BottomLeftImage alt="Logo do starbucks" src={Logo} />
       </IconsContainer>
     </MainCard>
   );
