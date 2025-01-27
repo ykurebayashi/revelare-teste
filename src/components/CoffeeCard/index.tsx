@@ -22,9 +22,10 @@ export const CoffeeCard = ({
   date,
   img,
   id,
+  index,
 }: CoffeeCardProps) => {
   return (
-    <MainCard>
+    <MainCard id={`post-${index}`}>
       <TitleContainer>
         <Title>{title}</Title>
         <Category>{category}</Category>

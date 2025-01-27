@@ -38,3 +38,17 @@ Projeto desenvolvido como parte do processo. Abaixo estão as principais ferrame
 - **Hooks Personalizados:** Criado para lidar com requisições à API, centralizando a lógica e mantendo o código mais limpo.
 
 - **Separação de Páginas e Componentes:** As páginas e componentes foram organizados em pastas separadas para evitar confusões e melhorar a legibilidade do código.
+
+### Limitações de Design
+
+Durante o desenvolvimento do projeto não houve acesso a nenhum software de design colaborativo (Figma, etc), nem às dimensões exatas com as quais a página foi planejada. Sendo assim:
+
+- O design **mobile** foi feito com base em **estimativas** e **práticas comuns**.
+- Não havia informações sobre especificações de elementos. Sendo assim, os seguintes elementos podem ser diferentes do design apresentado no mock:
+  - **Tamanhos de fontes**.
+  - **Fontes específicas** utilizadas no design.
+  - **Cores oficiais** ou paleta exata do projeto.
+
+Essas decisões foram feitas utilizando referências visuais disponíveis e estimativas para garantir que a aplicação fosse funcional e visualmente consistente.
+
+---

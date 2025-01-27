@@ -58,7 +58,7 @@ const Blog = () => {
           "Loading"
         ) : (
           <>
-            {usedData?.map((element) => {
+            {usedData?.map((element, index) => {
               return (
                 <CoffeeCard
                   title={element.strDrink}
@@ -66,6 +66,8 @@ const Blog = () => {
                   img={element.strDrinkThumb || ""}
                   category={element.strCategory}
                   id={element.idDrink}
+                  key={index}
+                  index={index + page * 6}
                 />
               );
             })}

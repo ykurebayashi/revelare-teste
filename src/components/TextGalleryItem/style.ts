@@ -40,7 +40,7 @@ export const Title = styled.h2`
     top: -15px;
     left: 0;
     height: 15px;
-    width: 45%;
+    width: 35%;
     background-color: #1f6047;
   }
 `;

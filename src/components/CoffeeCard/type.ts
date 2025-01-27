@@ -4,4 +4,5 @@ export type CoffeeCardProps = {
   img: string;
   category: string;
   id: string;
+  index: number;
 };
