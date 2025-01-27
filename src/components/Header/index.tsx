@@ -15,6 +15,7 @@ import { Link } from "react-router";
 import { useOutsideClick } from "../../utils/useGetClickOutside";
 import { HeaderProps } from "./type";
 import { useDebounce } from "../../utils/useDebounce";
+import { scrollToTop } from "../../utils/useAutoScroll";
 
 export const Header = ({ search, setSearch }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -54,6 +55,7 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
                 setIsOpen(false);
                 setSearch("");
                 setCurrentValue("");
+                scrollToTop();
               }}
               to={"/"}
               style={{ width: "100%", textAlign: "center" }}
@@ -65,6 +67,7 @@ export const Header = ({ search, setSearch }: HeaderProps) => {
                 setIsOpen(false);
                 setSearch("");
                 setCurrentValue("");
+                scrollToTop();
               }}
               to={"/blog"}
               style={{ width: "100%", textAlign: "center" }}

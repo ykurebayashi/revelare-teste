@@ -14,6 +14,7 @@ import {
 import { CoffeeCardProps } from "./type";
 import Logo from "../../assets/logo.png";
 import { Link } from "react-router";
+import { scrollToTop } from "../../utils/useAutoScroll";
 
 export const CoffeeCard = ({
   title,
@@ -32,7 +33,12 @@ export const CoffeeCard = ({
         <RoundInfo alt="Imagem da bebida ensinada no post" background={img} />
       </ContainerImage>
 
-      <Link to={`/blog/post/${id}`}>
+      <Link
+        to={`/blog/post/${id}`}
+        onClick={() => {
+          scrollToTop();
+        }}
+      >
         <CheckRecipeButton>Ver Receita</CheckRecipeButton>
       </Link>
       <BottomRightText>
