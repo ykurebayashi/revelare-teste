@@ -7,7 +7,7 @@ import {
   DrinkTitle,
   FlexDiv,
   Instructions,
-  BackPage,
+  BackPageButton,
 } from "./style";
 
 const DetailedPost = () => {
@@ -19,9 +19,9 @@ const DetailedPost = () => {
   return (
     <MainContent $isMobile={isMobile}>
       <Link to={"/blog"}>
-        <BackPage>
+        <BackPageButton>
           &lt; <span>Voltar</span>
-        </BackPage>
+        </BackPageButton>
       </Link>
       <DrinkTitle>{data?.drinks[0].strDrink}</DrinkTitle>
       <FlexDiv $isMobile={isMobile}>

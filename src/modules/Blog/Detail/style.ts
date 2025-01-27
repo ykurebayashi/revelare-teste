@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const MainContent = styled.main<{$isMobile?: boolean}>`
+type IsMobileType = {
+  $isMobile?: boolean
+}
+
+export const MainContent = styled.main<IsMobileType>`
   height: 85vh;
   width: 100%;
   display: flex;
@@ -26,12 +30,12 @@ export const DrinkTitle = styled.h1`
   }
 `;
 
-export const Instructions = styled.p<{$isMobile?: boolean}>`
+export const Instructions = styled.p<IsMobileType>`
   width: ${props => props.$isMobile ? '100%': '50%'};
   text-align: justify;
 `;
 
-export const FlexDiv = styled.div<{$isMobile?: boolean}>`
+export const FlexDiv = styled.div<IsMobileType>`
   display: flex;
   align-items: flex-start;
   width: 100%;
@@ -39,13 +43,13 @@ export const FlexDiv = styled.div<{$isMobile?: boolean}>`
   flex-direction: ${props => props.$isMobile ? 'column': 'row'};
 `;
 
-export const DrinkImage = styled.img<{$isMobile?: boolean}>`
+export const DrinkImage = styled.img<IsMobileType>`
   width: ${props => props.$isMobile ? '100%': '50%'};
   height: 100%;
   object-fit: contain;
 `;
 
-export const BackPage = styled.button`
+export const BackPageButton = styled.button`
   background: none;
   border: none;
   width: 100px;

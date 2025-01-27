@@ -16,7 +16,9 @@ const MAX_RENDER = 6;
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
+
   const context = useContext(SearchContext);
+
   const [page, setPage] = useState<number>(0);
   const [category, setCategory] = useState<string>("");
 
