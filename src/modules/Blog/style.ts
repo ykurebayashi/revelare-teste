@@ -44,6 +44,7 @@ export const PaginationButtons = styled.div<{ $index?: number }>`
 export const PaginationButton = styled.button<{
   $moveRight?: boolean;
   $isMobile?: boolean;
+  $isSelected?: boolean;
 }>`
   background: none;
   border: none;
@@ -51,6 +52,7 @@ export const PaginationButton = styled.button<{
   height: 100%;
   cursor: pointer;
   color: white;
+  font-size: ${(props) => (props.$isSelected ? "1em" : "0.7m")};
 
   ${({ $isMobile, $moveRight }) =>
     !$isMobile &&

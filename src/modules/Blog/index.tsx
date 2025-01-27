@@ -52,7 +52,6 @@ const Blog = () => {
         <HomepageButton
           onClick={() => {
             setPage(0);
-            setCategory("");
           }}
         >
           Início
@@ -84,6 +83,7 @@ const Blog = () => {
                 scrollToTop();
               }}
               $isMobile={isMobile}
+              $isSelected={currentCatg === category}
             >
               {currentCatg}
             </PaginationButton>
