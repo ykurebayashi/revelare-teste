@@ -24,7 +24,7 @@ const Home = () => {
           <WelcomeTitle $isMobile={isMobile}>Happy Hour</WelcomeTitle>
         </div>
         <SubtitleDescription $isMobile={isMobile}>
-          Encontraremos voce em sua caixa de entrada. Ofertas de bebidas estão a
+          Encontraremos você em sua caixa de entrada. Ofertas de bebidas estão a
           caminho
         </SubtitleDescription>
         <OptionsDiv>

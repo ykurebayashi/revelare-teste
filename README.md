@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# LP - Revelare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introdução
 
-Currently, two official plugins are available:
+Projeto desenvolvido como parte do processo. Abaixo estão as principais ferramentas e bibliotecas escolhidas para o desenvolvimento:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React (Vite)**
+- **TypeScript**
+- **Axios**
+- **React Query**
+- **Styled-Components**
+- **React Router**
 
-## Expanding the ESLint configuration
+## Decisões
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Escolha de Tecnologias
 
-- Configure the top-level `parserOptions` property like this:
+1. **React + Vite:** Proporcionam um ambiente mais rápido, com builds otimizadas.
+2. **React Query:** Reduz o código repetitivo para requisições à APIs, gerencia cache automaticamente e oferece outras ferramentas caso seja necessária customização no futuro (invalidação, desabilitação, etc).
+3. **Styled-Components:** Permite uma estilização mais dinâmica, legível e fácil de dar manutenção.
+4. **TypeScript:** Garante segurança na tipagem dos dados e propriedades, facilitando a manutenção.
+5. **Familiaridade:** Todas as tecnologias foram escolhidas com base no conhecimento prévio, que permitiram um desenvolvimento mais rápido e eficiente.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Organização do Projeto
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Estrutura de Componentes:**  
+  Componentes foram separados em até 4 arquivos:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+  - **Tipagem:** Arquivo exclusivo para tipos e interfaces.
+  - **Estilo:** Definição dos estilos utilizando Styled-Components.
+  - **Constantes:** Variáveis e dados estáticos relacionados ao componente.
+  - **Index:** Contém o código JSX (HTML em si) e a lógica do componente.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Pasta de Utils:** Criada para armazenar funções que podem ser reutilizadas em várias partes do projeto.
+
+- **Context API:** Implementado para evitar o prop drilling e facilitar o acesso ao estado global, como no caso do estado de pesquisa utilizado na página de blog e na home. Isso também garante que seja mais fácil adicionar novos recursos no futuro utilizando o valor da pesquisa do header.
+
+- **Hooks Personalizados:** Criado para lidar com requisições à API, centralizando a lógica e mantendo o código mais limpo.
+
+- **Separação de Páginas e Componentes:** As páginas e componentes foram organizados em pastas separadas para evitar confusões e melhorar a legibilidade do código.

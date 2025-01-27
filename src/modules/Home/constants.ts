@@ -15,7 +15,7 @@ import C3 from "../../assets/c3.jpg";
 const firstGallery: GalleryItem[] = [
   {
     title: "Quatro Bebidas, Um Milhão de Razões",
-    subTitle: "Lady Gaga e a starbucks compartinam uma missão: construir um mundo mais amavel e corajoso. Por meio da Fundação Born This Way, Lady Gaga inspirou seus fãs a abraçar a bondade em suas comunidades - online e no mundo todo. Com a sua ajuda, podemos capacitar os jovens a espalhar mais gentileza.", 
+    subTitle: "Lady Gaga e a starbucks compartilham uma missão: construir um mundo mais amável e corajoso. Por meio da Fundação Born This Way, Lady Gaga inspirou seus fãs a abraçarem a bondade em suas comunidades - online e no mundo todo. Com a sua ajuda, podemos capacitar os jovens a espalhar mais gentileza.", 
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
@@ -77,7 +77,7 @@ const secondGallery: GalleryItem[] = [
 const thirdGallery: GalleryItem[] = [
   {
     title: "Chegou o novo ultra caramel frappuccino!",
-    subTitle: "Parabéns por favor isso! Isso exige caramelo. Com creme de leite fresco. Chegou o novo ultra caramel frappuccino!",
+    subTitle: "Parabéns por fazer isso! Isso exige caramelo. Com creme de leite fresco. Chegou o novo ultra caramel frappuccino!",
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
@@ -99,7 +99,7 @@ const thirdGallery: GalleryItem[] = [
 const fourthGallery: GalleryItem[] = [
   {
     title: "A bondade começa com uma xícara",
-    subTitle: "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão delicioso e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
+    subTitle: "Apresentando a coleção Cups of Kindness: quatro drinks muito especiais tão deliciosos e refrescantes quanto lindos. Duas novas criações, Match Lemonade e Violet Drink, irão se juntar a Pink Drink e Ombré Pink Drink como favoritos instantâneos do verão.",
     buttonText: "Saber mais",
     gridColumnStart: 1,
     gridColumnEnd: 1,
