@@ -5,7 +5,7 @@ type IsMobileType = {
 };
 
 export const MainContent = styled.main<IsMobileType>`
-  height: 85vh;
+  height: 78vh;
   width: 100%;
   display: flex;
   flex-direction: column;
