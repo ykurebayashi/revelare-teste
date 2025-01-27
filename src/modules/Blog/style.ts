@@ -13,7 +13,7 @@ export const MainContent = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 2em 3em;
-  height: 78vh;
+  height: 78dvh;
   width: 100%;
   padding: 10px 0;
   background-color: #e7e9ed;
