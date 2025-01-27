@@ -11,8 +11,7 @@ import {
   ListItem,
 } from "./style";
 import { SearchContext } from "../../state/searchContext";
-
-const MAX_RENDER = 6;
+import { MAX_RENDER } from "./constants";
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
@@ -107,6 +106,7 @@ const Blog = () => {
               <ListItem
                 onClick={() => setCategory(element)}
                 $isSelected={element.toLowerCase() === category.toLowerCase()}
+                key={element}
               >
                 {element}
               </ListItem>
