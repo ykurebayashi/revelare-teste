@@ -1,5 +1,4 @@
 import { formatDate } from "../../utils/useFormatDate";
-import { RoundInfo } from "../RoundInfo";
 import {
   TitleContainer,
   Category,
@@ -7,9 +6,8 @@ import {
   Title,
   BottomLeftImage,
   BottomRightText,
-  ContainerImage,
   IconsContainer,
-  CheckRecipeButton,
+  RecipeImage,
 } from "./style";
 import { CoffeeCardProps } from "./type";
 import Logo from "../../assets/logo.png";
@@ -26,22 +24,20 @@ export const CoffeeCard = ({
 }: CoffeeCardProps) => {
   return (
     <MainCard id={`post-${index}`}>
-      <TitleContainer>
-        <Title>{title}</Title>
-        <Category>{category}</Category>
-      </TitleContainer>
-      <ContainerImage>
-        <RoundInfo alt="Imagem da bebida ensinada no post" background={img} />
-      </ContainerImage>
+      <RecipeImage alt="Imagem da receite" src={img} />
 
-      <Link
-        to={`/blog/post/${id}`}
-        onClick={() => {
-          scrollToTop();
-        }}
-      >
-        <CheckRecipeButton>Ver Receita</CheckRecipeButton>
-      </Link>
+      <TitleContainer>
+        <Link
+          to={`/blog/post/${id}`}
+          onClick={() => {
+            scrollToTop();
+          }}
+        >
+          <Title>{title}</Title>
+          <Category>{category}</Category>
+        </Link>
+      </TitleContainer>
+
       <BottomRightText>
         <time dateTime={new Date(date).toISOString()}>{formatDate(date)}</time>
       </BottomRightText>

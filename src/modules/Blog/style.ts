@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const Main = styled.main`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  min-height: 78vh;
 `;
 
 export const MainContent = styled.div`
@@ -13,23 +15,31 @@ export const MainContent = styled.div`
   align-items: center;
   flex-wrap: wrap;
   gap: 2em 3em;
-  height: 78dvh;
-  width: 100%;
-  padding: 10px 0;
-  background-color: #e7e9ed;
-  overflow-y: scroll;
+  width: 90%;
+  padding: 30px;
+
+  @media (min-width: 1450px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1900px) {
+    width: 60%;
+  }
 `;
 
 export const PaginationButtons = styled.div`
   width: 100%;
-  border-top: 1px solid #1f6047;
+  border-bottom: 1px solid #1f6047;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #1f6047;
   height: 7vh;
   padding: 0.5em;
   gap: 5px;
+  position: sticky;
+  top: 12vh;
+  z-index: 100;
 `;
 export const PaginationButton = styled.button<{ $moveRight?: boolean }>`
   background: none;
@@ -37,11 +47,10 @@ export const PaginationButton = styled.button<{ $moveRight?: boolean }>`
   width: 100px;
   height: 100%;
   cursor: pointer;
-  color: black;
+  color: white;
   transform: translateX(${(props) => (props.$moveRight ? "-15px" : "15px")});
 
   &:hover {
-    color: #1f6047;
     transform: translateX(0px);
     transition: transform 0.3s ease;
   }
@@ -52,11 +61,10 @@ export const HomepageButton = styled.button`
   width: 100px;
   height: 100%;
   cursor: pointer;
-  color: black;
+  color: white;
   transform: translateY(0px);
 
   &:hover {
-    color: #1f6047;
     transform: translateY(-10px);
     transition: transform 0.3s ease;
   }

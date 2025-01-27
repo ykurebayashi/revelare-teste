@@ -1,24 +1,25 @@
 import styled from "styled-components";
 
 export const MainCard = styled.article`
-  width: 350px;
+  width: 275px;
   min-height: 275px;
-  border: 1px solid green;
-  border-radius: 4px;
-  padding: 5px 15px;
+  max-height: 275px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
   background-color: white;
   position: relative;
+  border-bottom: 1px solid #1f6047;
+  padding-bottom: 70px;
+`;
+
+export const RecipeImage = styled.img`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 `;
 
 export const TitleContainer = styled.div`
-  display: flex;
-  align-items: baseline;
-  justify-content: flex-start;
-  gap: 10px;
   width: 100%;
 `;
 
@@ -26,6 +27,7 @@ export const Title = styled.h2`
   position: relative;
   font-weight: bolder;
   font-size: 1.5em;
+  color: black;
   &::before {
     content: "";
     position: absolute;
@@ -42,37 +44,21 @@ export const Category = styled.h3`
   font-size: 1em;
 `;
 
-export const ContainerImage = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-`;
-
 export const BottomRightText = styled.p`
   position: absolute;
-  bottom: 10px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
   width: fit-content;
   color: #1f6047;
 `;
 
 export const IconsContainer = styled.div`
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
   display: flex;
   gap: 10px;
 `;
 export const BottomLeftImage = styled.img`
   width: 20px;
-`;
-
-export const CheckRecipeButton = styled.button`
-  width: 130px;
-  height: 45px;
-  background: none;
-  border: 1px solid #1f6047;
-  color: #1f6047;
-  border-radius: 50px;
-  cursor: pointer;
 `;

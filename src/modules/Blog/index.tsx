@@ -12,6 +12,7 @@ import {
 } from "./style";
 import { SearchContext } from "../../state/searchContext";
 import { useGetBlogPageData } from "./hook";
+import { scrollToTop } from "../../utils/useAutoScroll";
 
 const Blog = () => {
   const { data, isLoading } = useGetCoffeeRecipes();
@@ -34,6 +35,37 @@ const Blog = () => {
 
   return (
     <Main>
+      <PaginationButtons>
+        <PaginationButton
+          disabled={page === 0}
+          onClick={() => {
+            setPage(page - 1);
+            scrollToTop();
+          }}
+        >
+          &lt; <span>Anterior</span>
+        </PaginationButton>
+
+        <HomepageButton
+          onClick={() => {
+            setPage(0);
+            setCategory("");
+          }}
+        >
+          Redefinir
+        </HomepageButton>
+
+        <PaginationButton
+          disabled={(usedData?.length ?? 0) < 6}
+          onClick={() => {
+            setPage(page + 1);
+            scrollToTop();
+          }}
+          $moveRight
+        >
+          <span>Próxima</span> &gt;
+        </PaginationButton>
+      </PaginationButtons>
       <MainContent>
         {isLoading ? (
           "Loading"
@@ -55,31 +87,7 @@ const Blog = () => {
           </>
         )}
       </MainContent>
-      <PaginationButtons>
-        <PaginationButton
-          disabled={page === 0}
-          onClick={() => setPage(page - 1)}
-        >
-          &lt; <span>Anterior</span>
-        </PaginationButton>
 
-        <HomepageButton
-          onClick={() => {
-            setPage(0);
-            setCategory("");
-          }}
-        >
-          Redefinir
-        </HomepageButton>
-
-        <PaginationButton
-          disabled={(usedData?.length ?? 0) < 6}
-          onClick={() => setPage(page + 1)}
-          $moveRight
-        >
-          <span>Próxima</span> &gt;
-        </PaginationButton>
-      </PaginationButtons>
       <CategoryFilter>
         <h3>Categorias:</h3>
         <ul>

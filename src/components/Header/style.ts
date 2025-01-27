@@ -10,7 +10,7 @@ export const MainContent = styled.header`
   border-top: 10px solid #1f6047;
   border-bottom: 1px solid #1f6047;
   background-color: white;
-  z-index: 100;
+  z-index: 101;
   position: sticky;
   top: 0;
 `;
